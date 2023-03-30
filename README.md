@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @mhlimon
-- 👀 I’m interested in Power System, Control System, Networking, Automation, Security and related softwares
+- 👀 I’m interested in Power System, Control System, Networking, Automation, Power System Cyber Security and related softwares
 - 🌱 I’m currently learning Python
 - 💞️ I’m looking to collaborate on softwares related to my interested topics
 - 📫 reach me [mhlimon](https://www.linkedin.com/in/mhlimon/)
