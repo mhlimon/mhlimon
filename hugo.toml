@@ -1,0 +1,133 @@
+baseURL = "https://mhlimon.com"
+title = "রাফখাতা"
+theme = "PaperMod"
+paginate = 10
+enableRobotsTXT = true
+enableGitInfo = true
+
+defaultContentLanguage = "bn"
+languageCode = "bn-BD"
+hasCJKLanguage = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  author = "মেহেদী হোসেন লিমন"
+  description = "রাফখাতা — বাংলা সাহিত্য, প্রযুক্তি নোট, আরবি শিক্ষা এবং জীবনের ছোট ছোট গল্প।"
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  ShowBreadCrumbs = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableScrollToTop = false
+  comments = true
+  hidemeta = false
+  hideSummary = false
+  showtags = true
+  ShowAllPagesInArchive = true
+  mainSections = ["bangla", "tech"]
+
+  # Custom CSS and JS
+  assets.disableFingerprinting = true
+
+  # Search
+  fuseOpts.isCaseSensitive = false
+  fuseOpts.shouldSort = true
+  fuseOpts.location = 0
+  fuseOpts.distance = 1000
+  fuseOpts.threshold = 0.4
+  fuseOpts.minMatchCharLength = 1
+  fuseOpts.keys = ["title", "permalink", "summary", "content"]
+
+  [params.homeInfoParams]
+    Title = "মেহেদী হোসেন লিমন"
+    Content = "প্রকৌশলী · লেখক · আরবি শিক্ষার্থী — স্বাগতম রাফখাতায়"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/mhlimon"
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+  [params.cover]
+    hidden = false
+    hiddenInList = false
+    hiddenInSingle = false
+
+  [params.editPost]
+    URL = "https://github.com/YOUR_GITHUB_USERNAME/mhlimon/edit/main/content"
+    Text = "✏️ Edit this post"
+    appendFilePath = true
+
+# ── NAVIGATION ──
+[[menu.main]]
+  identifier = "home"
+  name = "মূলপাতা"
+  url = "/"
+  weight = 1
+[[menu.main]]
+  identifier = "bangla"
+  name = "বাংলা সাহিত্য"
+  url = "/bangla/"
+  weight = 2
+[[menu.main]]
+  identifier = "tech"
+  name = "Tech Blog"
+  url = "/tech/"
+  weight = 3
+[[menu.main]]
+  identifier = "arabic"
+  name = "Arabic"
+  url = "/arabic/"
+  weight = 4
+[[menu.main]]
+  identifier = "projects"
+  name = "Projects"
+  url = "/projects/"
+  weight = 5
+[[menu.main]]
+  identifier = "videos"
+  name = "Videos"
+  url = "/videos/"
+  weight = 6
+[[menu.main]]
+  identifier = "cv"
+  name = "CV"
+  url = "/cv/"
+  weight = 7
+[[menu.main]]
+  identifier = "search"
+  name = "🔍"
+  url = "/search/"
+  weight = 8
+[[menu.main]]
+  identifier = "admin"
+  name = "⚙ Admin"
+  url = "/admin/"
+  weight = 99
+
+# ── TAXONOMY ──
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    noClasses = false
+    anchorLineNos = true
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    style = "monokai"
