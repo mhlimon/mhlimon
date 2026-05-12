@@ -132,6 +132,3 @@ hasCJKLanguage = true
     lineNos = true
     style = "monokai"
 
-[module]
-  [[module.imports]]
-    path = "github.com/adityatelange/hugo-PaperMod"
