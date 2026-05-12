@@ -1,6 +1,6 @@
 baseURL = "https://mhlimon.com"
 title = "রাফখাতা"
-theme = "PaperMod"
+theme = ["PaperMod"]
 paginate = 10
 enableRobotsTXT = true
 enableGitInfo = true

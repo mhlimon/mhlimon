@@ -3,5 +3,4 @@
   publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "0.139.0"   # You can increase this if needed
-  GIT_SUBMODULE_STRATEGY = "recursive"   # Safety net
+  HUGO_VERSION = "0.139.0"
