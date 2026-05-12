@@ -1,0 +1,41 @@
+{{- define "main" }}
+<article class="post-single">
+  <header class="post-header">
+    {{- partial "breadcrumbs.html" . }}
+    <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
+    {{- with .Description }}
+    <div class="post-description">{{ . }}</div>
+    {{- end }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+    </div>
+  </header>
+
+  {{- with .Resources.GetMatch "cover.*" }}
+  <div class="post-cover">
+    <img src="{{ .RelPermalink }}" alt="cover" loading="lazy">
+  </div>
+  {{- end }}
+
+  <div class="post-content">
+    {{- .Content }}
+  </div>
+
+  {{/* Tags */}}
+  {{- $tags := .Params.tags }}
+  {{- if $tags }}
+  <div class="post-tags" style="margin-top:28px;padding-top:18px;border-top:1px solid var(--border)">
+    {{- range $tags }}
+    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/" class="post-tag tag-bn" style="text-decoration:none;margin-right:4px">{{ . }}</a>
+    {{- end }}
+  </div>
+  {{- end }}
+
+  {{/* Post navigation */}}
+  {{- partial "post_nav_links.html" . }}
+
+  {{/* Comments */}}
+  {{- partial "comments.html" . }}
+
+</article>
+{{- end }}

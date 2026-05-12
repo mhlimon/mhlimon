@@ -1,0 +1,161 @@
+{{ define "main" }}
+{{ $bangla := where .Site.RegularPages "Section" "bangla" }}
+{{ $tech   := where .Site.RegularPages "Section" "tech" }}
+{{ $notes  := where .Site.RegularPages "Section" "notes" }}
+
+<div class="home-wrap">
+
+  {{/* ── HERO ── */}}
+  <section class="hero-strip">
+    <div class="hero-inner">
+      <div class="hero-avatar">মহ</div>
+      <div>
+        <h1 class="hero-name">মেহেদী হোসেন লিমন</h1>
+        <p class="hero-sub">Electrical Engineer &nbsp;·&nbsp; Bangla Writer &nbsp;·&nbsp; Arabic Learner</p>
+      </div>
+      <div class="hero-links">
+        {{ range .Site.Params.socialIcons }}
+        <a href="{{ .url }}" target="_blank" rel="noopener" class="hero-icon-link" aria-label="{{ .name }}">
+          {{- partial "svg.html" . -}}
+        </a>
+        {{ end }}
+        <a href="/cv/" class="hero-cta-btn">CV →</a>
+      </div>
+    </div>
+  </section>
+
+  {{/* ── MAIN GRID ── */}}
+  <div class="home-grid">
+
+    {{/* ═══ LEFT / MAIN ═══ */}}
+    <main class="home-main">
+
+      {{/* BANGLA POSTS */}}
+      {{ if $bangla }}
+      <section class="home-section">
+        <div class="section-head">
+          <h2 class="section-title">বাংলা সাহিত্য ও প্রবন্ধ</h2>
+          <a href="/bangla/" class="section-more">সব লেখা →</a>
+        </div>
+
+        {{/* Featured first post */}}
+        {{ with (index $bangla 0) }}
+        <a href="{{ .RelPermalink }}" class="post-featured">
+          <div class="pf-label">সর্বশেষ লেখা</div>
+          <div class="post-meta">
+            {{ range first 1 .Params.tags }}<span class="post-tag tag-bn">{{ . }}</span>{{ end }}
+            <time class="post-date">{{ .Date.Format "2 January 2006" }}</time>
+          </div>
+          <h3 class="pf-title">{{ .Title }}</h3>
+          <p class="pf-excerpt">{{ .Summary | truncate 200 }}</p>
+        </a>
+        {{ end }}
+
+        {{/* Rest of bangla posts */}}
+        <div class="post-list">
+        {{ range (after 1 (first 4 $bangla)) }}
+          <a href="{{ .RelPermalink }}" class="post-row">
+            <div class="pr-date-col">
+              <time>{{ .Date.Format "Jan 2006" }}</time>
+            </div>
+            <div class="pr-body">
+              {{ range first 1 .Params.tags }}<span class="post-tag tag-bn">{{ . }}</span>{{ end }}
+              <span class="pr-title">{{ .Title }}</span>
+              <p class="pr-excerpt">{{ .Summary | truncate 120 }}</p>
+            </div>
+          </a>
+        {{ end }}
+        </div>
+      </section>
+      {{ end }}
+
+      <hr class="section-divider">
+
+      {{/* TECH POSTS */}}
+      {{ if $tech }}
+      <section class="home-section">
+        <div class="section-head">
+          <h2 class="section-title">Tech Blog</h2>
+          <a href="/tech/" class="section-more">All posts →</a>
+        </div>
+        <div class="post-list">
+        {{ range first 3 $tech }}
+          <a href="{{ .RelPermalink }}" class="post-row">
+            <div class="pr-date-col">
+              <time>{{ .Date.Format "Jan 2006" }}</time>
+            </div>
+            <div class="pr-body">
+              {{ range first 1 .Params.tags }}<span class="post-tag tag-tech">{{ . }}</span>{{ end }}
+              <span class="pr-title">{{ .Title }}</span>
+              <p class="pr-excerpt">{{ .Summary | truncate 140 }}</p>
+            </div>
+          </a>
+        {{ end }}
+        </div>
+      </section>
+      {{ end }}
+
+    </main>
+
+    {{/* ═══ SIDEBAR ═══ */}}
+    <aside class="home-sidebar">
+
+      {{/* DAILY NOTES */}}
+      <div class="sb-block">
+        <div class="sb-head">Daily Notes</div>
+        {{ if $notes }}
+          {{ range first 6 $notes }}
+          <div class="note-entry">
+            <div class="note-date">{{ .Date.Format "2 Jan 2006" }}</div>
+            <div class="note-text">{{ .Title }}</div>
+            {{ with .Summary }}<div class="note-body">{{ . | truncate 80 }}</div>{{ end }}
+          </div>
+          {{ end }}
+        {{ else }}
+          <p class="sb-empty">Add entries in <code>content/notes/</code> via the admin panel.</p>
+        {{ end }}
+        <a href="/notes/" class="sb-see-all">All notes →</a>
+      </div>
+
+      {{/* QUICK NAVIGATE */}}
+      <div class="sb-block">
+        <div class="sb-head">Explore</div>
+        <div class="sb-grid">
+          <a href="/arabic/" class="sb-btn">🌙 Arabic</a>
+          <a href="/videos/" class="sb-btn">▶ Videos</a>
+          <a href="/projects/" class="sb-btn">⚡ Projects</a>
+          <a href="/cv/" class="sb-btn">📄 CV</a>
+        </div>
+      </div>
+
+      {{/* RECENT TAGS */}}
+      <div class="sb-block">
+        <div class="sb-head">Topics</div>
+        <div class="sb-tags">
+          {{ $pages := .Site.RegularPages }}
+          {{ $tags := slice }}
+          {{ range $pages }}
+            {{ range .Params.tags }}
+              {{ $tags = $tags | append . }}
+            {{ end }}
+          {{ end }}
+          {{ range (uniq $tags | first 14) }}
+          <a href="/tags/{{ . | urlize }}/" class="sb-tag-pill">{{ . }}</a>
+          {{ end }}
+        </div>
+      </div>
+
+      {{/* RSS + SEARCH */}}
+      <div class="sb-block">
+        <div class="sb-head">Follow</div>
+        <div class="sb-follow-links">
+          <a href="/index.xml" class="sb-follow-btn">📡 RSS Feed</a>
+          <a href="/search/" class="sb-follow-btn">🔍 Search</a>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+</div>
+{{ end }}

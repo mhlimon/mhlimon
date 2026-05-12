@@ -1,0 +1,135 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/mhlimon
+  branch: main
+  # For GitHub Pages with custom domain, use:
+  # base_url: https://mhlimon.com
+  # auth_endpoint: /api/auth
+
+media_folder: "static/images"
+public_folder: "/images"
+
+# ── SITE LOGO in admin panel ──
+site_url: https://mhlimon.com
+display_url: https://mhlimon.com
+logo_url: https://mhlimon.com/images/logo.png
+
+collections:
+
+  # ── বাংলা BLOG ──
+  - name: "bangla"
+    label: "📖 বাংলা সাহিত্য"
+    label_singular: "বাংলা পোস্ট"
+    folder: "content/bangla"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "bangla/{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "শিরোনাম (Title)", name: "title", widget: "string" }
+      - { label: "তারিখ (Date)", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - label: "ট্যাগ (Tags)"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        options: ["সাহিত্য", "ইসলাম", "ছোটগল্প", "প্রবন্ধ", "কবিতা", "স্মৃতি", "শিক্ষা", "সমাজ", "রমজান", "জীবন"]
+      - { label: "সারসংক্ষেপ (Summary/Excerpt)", name: "description", widget: "string", required: false }
+      - { label: "প্রকাশ করতে চান?", name: "draft", widget: "boolean", default: false, hint: "false = published, true = draft" }
+      - { label: "বিষয়বস্তু (Body)", name: "body", widget: "markdown" }
+
+  # ── TECH BLOG ──
+  - name: "tech"
+    label: "💻 Tech Blog"
+    label_singular: "Tech Post"
+    folder: "content/tech"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - label: "Tags"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        options: ["OT Security", "Electrical Eng.", "Cybersecurity", "SCADA", "Power Systems", "IEC 62443", "Field Notes", "PLC", "DCS"]
+      - { label: "Description/Excerpt", name: "description", widget: "string", required: false }
+      - { label: "Draft?", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # ── DAILY NOTES ──
+  - name: "notes"
+    label: "📝 Daily Notes"
+    label_singular: "Note"
+    folder: "content/notes"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{date}} — {{title}}"
+    fields:
+      - { label: "Title (one-liner summary)", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Body (optional, longer note)", name: "body", widget: "markdown", required: false }
+
+  # ── ARABIC LESSONS ──
+  - name: "arabic"
+    label: "🌙 Arabic"
+    label_singular: "Arabic Lesson"
+    folder: "content/arabic"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - label: "Type"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        options: ["Lesson", "Vocabulary", "Phrase", "Grammar", "Quran", "Dua"]
+      - { label: "Lesson Number", name: "weight", widget: "number", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # ── PROJECTS ──
+  - name: "projects"
+    label: "⚡ Projects"
+    label_singular: "Project"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Project Name", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Live URL", name: "projectUrl", widget: "string", required: false }
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        options: ["Live", "Building", "Planned"]
+        default: "Live"
+      - label: "Color"
+        name: "color"
+        widget: "select"
+        options: ["red", "teal", "amber", "blue"]
+        default: "teal"
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+      - { label: "Sort order (lower = first)", name: "weight", widget: "number", default: 10 }
+      - { label: "Description", name: "body", widget: "markdown" }
+
+  # ── VIDEOS ──
+  - name: "videos"
+    label: "▶ Videos"
+    label_singular: "Video"
+    folder: "content/videos"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "YouTube Video ID", name: "youtubeId", widget: "string", hint: "The part after ?v= in a YouTube URL" }
+      - label: "Category"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        options: ["OT Security", "Electrical Eng.", "বাংলা Tech", "Arabic", "General"]
+      - { label: "Description", name: "body", widget: "markdown", required: false }

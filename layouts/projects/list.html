@@ -1,0 +1,37 @@
+{{- define "main" }}
+<div>
+  <div class="section-head" style="margin-bottom:24px">
+    <h1 class="section-title" style="font-size:22px!important;letter-spacing:normal!important;text-transform:none!important">Projects</h1>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-bottom:48px">
+  {{- range .Pages.ByWeight }}
+  {{- $color := .Params.color | default "teal" }}
+  {{- $topColor := cond (eq $color "red") "var(--accent)" (cond (eq $color "amber") "var(--amber)" (cond (eq $color "blue") "var(--blue)" "var(--teal)")) }}
+  <div style="background:var(--paper-warm);border:1px solid var(--border-mid);border-top:3px solid {{ $topColor }};border-radius:var(--radius-lg);padding:22px;position:relative">
+    <div style="font-size:14px;font-weight:600;color:var(--ink);margin-bottom:8px;font-family:var(--font-bn)">{{ .Title }}</div>
+    <div style="font-size:13px;color:var(--ink-muted);line-height:1.6;margin-bottom:12px">{{ .Summary | truncate 120 }}</div>
+    <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:14px">
+      {{- range .Params.tags }}
+      <span style="font-size:10px;font-family:var(--font-mono);padding:2px 8px;border-radius:3px;background:var(--paper-deep);color:var(--ink-muted)">{{ . }}</span>
+      {{- end }}
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      {{- $status := .Params.status | default "Live" }}
+      {{- $statusColor := cond (eq $status "Live") "var(--teal)" (cond (eq $status "Building") "var(--amber)" "var(--ink-faint)") }}
+      <span style="font-size:10px;font-family:var(--font-mono);color:{{ $statusColor }}">● {{ $status }}</span>
+      {{- with .Params.projectUrl }}
+      <a href="{{ . }}" target="_blank" style="font-size:12px;font-family:var(--font-serif);font-style:italic;color:var(--ink-muted);text-decoration:none">Visit →</a>
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+  </div>
+
+  {{- if not .Pages }}
+  <p style="color:var(--ink-muted);font-style:italic;font-family:var(--font-serif)">
+    Add projects via <a href="/admin/" style="color:var(--accent)">the admin panel</a>.
+  </p>
+  {{- end }}
+</div>
+{{- end }}

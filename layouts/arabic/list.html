@@ -1,0 +1,50 @@
+{{- define "main" }}
+<div>
+  <div class="section-head" style="margin-bottom:6px">
+    <h1 class="section-title" style="font-size:22px!important;letter-spacing:normal!important;text-transform:none!important">Arabic Learning</h1>
+  </div>
+  <div style="font-family:var(--font-ar);font-size:28px;direction:rtl;text-align:center;padding:20px;background:var(--paper-warm);border-radius:var(--radius-lg);border:1px solid var(--border);margin-bottom:28px;color:var(--ink);line-height:1.6">
+    تَعَلَّمِ الْعَرَبِيَّةَ
+    <div style="font-family:var(--font-serif);font-size:12px;direction:ltr;color:var(--ink-muted);margin-top:6px;letter-spacing:0.1em">Arabic Learning — Notes from a Bangla Speaker</div>
+  </div>
+
+  {{- $lessons  := where .Pages "Params.tags" "intersect" (slice "Lesson") }}
+  {{- $vocab    := where .Pages "Params.tags" "intersect" (slice "Vocabulary") }}
+  {{- $phrases  := where .Pages "Params.tags" "intersect" (slice "Phrase") }}
+  {{- $other    := .Pages }}
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:28px">
+    <div style="background:var(--amber-bg);border:1px solid var(--border);border-radius:var(--radius);padding:12px;text-align:center">
+      <div style="font-size:22px;font-weight:600;font-family:var(--font-serif);color:var(--amber)">{{ len .Pages }}</div>
+      <div style="font-size:10px;font-family:var(--font-mono);color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.08em;margin-top:2px">Total Entries</div>
+    </div>
+    <div style="background:var(--teal-bg);border:1px solid var(--border);border-radius:var(--radius);padding:12px;text-align:center">
+      <div style="font-size:22px;font-weight:600;font-family:var(--font-serif);color:var(--teal)">{{ len $lessons }}</div>
+      <div style="font-size:10px;font-family:var(--font-mono);color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.08em;margin-top:2px">Lessons</div>
+    </div>
+    <div style="background:var(--accent-bg);border:1px solid var(--border);border-radius:var(--radius);padding:12px;text-align:center">
+      <div style="font-size:22px;font-weight:600;font-family:var(--font-serif);color:var(--accent)">{{ len $vocab }}</div>
+      <div style="font-size:10px;font-family:var(--font-mono);color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.08em;margin-top:2px">Vocabulary</div>
+    </div>
+  </div>
+
+  {{- range .Pages.ByWeight }}
+  <a href="{{ .RelPermalink }}" class="post-row" style="display:grid;grid-template-columns:80px 1fr;text-decoration:none;color:inherit">
+    <div class="pr-date-col">{{ .Date.Format "Jan 2006" }}</div>
+    <div>
+      {{- range first 1 .Params.tags }}
+      <span class="post-tag tag-ar" style="margin-bottom:4px;display:inline-block">{{ . }}</span>
+      {{- end }}
+      <div class="pr-title">{{ .Title }}</div>
+      {{- with .Description }}<p class="pr-excerpt">{{ . }}</p>{{- end }}
+    </div>
+  </a>
+  {{- end }}
+
+  {{- if not .Pages }}
+  <p style="color:var(--ink-muted);font-style:italic;font-family:var(--font-serif)">
+    Add Arabic lessons and vocab via <a href="/admin/" style="color:var(--accent)">the admin panel</a>.
+  </p>
+  {{- end }}
+</div>
+{{- end }}
