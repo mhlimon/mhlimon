@@ -64,7 +64,7 @@ hasCJKLanguage = true
     hiddenInSingle = false
 
   [params.editPost]
-    URL = "https://github.com/YOUR_GITHUB_USERNAME/mhlimon/edit/main/content"
+    URL = "https://github.com/mhlimon/mhlimon/edit/main/content"
     Text = "✏️ Edit this post"
     appendFilePath = true
 
