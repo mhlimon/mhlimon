@@ -1,152 +1,65 @@
 baseURL = "https://mhlimon.com"
-title = "mhlimon"
+title = "MH Limon"
 theme = "PaperMod"
+
+# নতুন ব্র্যান্ডিং
+[languages.en]
+  languageCode = "en"
+  title = "MH Limon"
+  description = "Power Plant I&C Engineer • তালিবুল ইলম • Writer"
+
+# পেজিনেশন ফিক্স (আগের এররের জন্য)
 [pagination]
   pagerSize = 10
-enableRobotsTXT = true
-enableGitInfo = true
 
-defaultContentLanguage = "bn"
-languageCode = "bn-BD"
-hasCJKLanguage = true
+# মেনু
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
 
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 2
 
+[[menu.main]]
+  name = "রাফখাতা"
+  url = "/bangla/"
+  weight = 3
+
+[[menu.main]]
+  name = "Tech"
+  url = "/tech/"
+  weight = 4
+
+[[menu.main]]
+  name = "CV"
+  url = "/cv/"
+  weight = 5
+
+# সোশ্যাল লিঙ্ক
+[social]
+  linkedin = "https://linkedin.com/in/mhlimon"
+  facebook = "https://fb.com/mehedihossen.limon"
+  github = "https://github.com/mhlimon"
+
+# PaperMod কনফিগারেশন (নতুন লুক)
 [params]
+  description = "Engineer • তালিবুল ইলম • Writer"
   author = "Mehedi Hossen Limon"
-  description = "Power plant engineer. Talibul ilm. Writing about life, Islam, and the world between two classrooms."
-  defaultTheme = "auto"
-  disableThemeToggle = false
+  defaultTheme = "light"
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
   ShowToc = true
-  TocOpen = false
-  ShowBreadCrumbs = true
-  ShowWordCount = true
-  ShowRssButtonInSectionTermList = true
-  UseHugoToc = true
-  disableScrollToTop = false
-  comments = true
-  hidemeta = false
-  hideSummary = false
-  showtags = true
-  ShowAllPagesInArchive = true
-  mainSections = ["bangla", "tech"]
 
-  # Google Analytics — replace with your real ID
-  googleAnalytics = "G-XXXXXXXXXX"
+  # নতুন কালার স্কিম (আপনার ব্র্যান্ডের জন্য)
+  accentColor = "#2c5f2d"        # Deep Green (ইলম + প্রকৃতি)
+  mainColor = "#1e3a8a"           # Professional Blue
 
-  # Profile photo — upload your photo as static/images/avatar.jpg
-  # avatar = "/images/avatar.jpg"
-
-  assets.disableFingerprinting = true
-
-  # Search
-  fuseOpts.isCaseSensitive = false
-  fuseOpts.shouldSort = true
-  fuseOpts.location = 0
-  fuseOpts.distance = 1000
-  fuseOpts.threshold = 0.4
-  fuseOpts.minMatchCharLength = 1
-  fuseOpts.keys = ["title", "permalink", "summary", "content"]
-
-  # Open Graph image (create a 1200x630 image, upload to static/images/)
-  images = ["/images/og-image.png"]
-
-  [params.homeInfoParams]
+  # হোমপেজ
+  homeInfoParams:
     Title = "Mehedi Hossen Limon"
-    Content = "Power plant engineer · তালিবুল ইলম · Writing about life and Islam"
-
-  [[params.socialIcons]]
-    name = "linkedin"
-    url = "https://linkedin.com/in/mhlimon"
-
-  [[params.socialIcons]]
-    name = "facebook"
-    url = "https://fb.com/mehedihossen.limon"
-
-  [[params.socialIcons]]
-    name = "rss"
-    url = "/index.xml"
-
-  [params.cover]
-    hidden = false
-    hiddenInList = false
-    hiddenInSingle = false
-
-  [params.editPost]
-    URL = "https://github.com/mhlimon/mhlimon/edit/main/content"
-    Text = "✏️ Edit"
-    appendFilePath = true
-
-# ── NAVIGATION ──
-[[menu.main]]
-  identifier = "home"
-  name = "মূলপাতা"
-  url = "/"
-  weight = 1
-[[menu.main]]
-  identifier = "bangla"
-  name = "বাংলা"
-  url = "/bangla/"
-  weight = 2
-[[menu.main]]
-  identifier = "tech"
-  name = "Tech"
-  url = "/tech/"
-  weight = 3
-[[menu.main]]
-  identifier = "arabic"
-  name = "Arabic"
-  url = "/arabic/"
-  weight = 4
-[[menu.main]]
-  identifier = "projects"
-  name = "Projects"
-  url = "/projects/"
-  weight = 5
-[[menu.main]]
-  identifier = "videos"
-  name = "Videos"
-  url = "/videos/"
-  weight = 6
-[[menu.main]]
-  identifier = "cv"
-  name = "CV"
-  url = "/cv/"
-  weight = 7
-[[menu.main]]
-  identifier = "about"
-  name = "About"
-  url = "/about/"
-  weight = 8
-[[menu.main]]
-  identifier = "search"
-  name = "🔍"
-  url = "/search/"
-  weight = 9
-[[menu.main]]
-  identifier = "admin"
-  name = "⚙"
-  url = "/admin/"
-  weight = 99
-
-# ── TAXONOMY ──
-[taxonomies]
-  tag = "tags"
-  category = "categories"
-  series = "series"
-
-[markup]
-  [markup.goldmark.renderer]
-    unsafe = true
-  [markup.highlight]
-    noClasses = false
-    anchorLineNos = true
-    codeFences = true
-    guessSyntax = true
-    lineNos = true
-    style = "monokai"
+    Content = "Power Plant Engineer by profession.<br>তালিবুল ইলম by passion.<br>লেখক by necessity."
