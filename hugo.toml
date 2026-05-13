@@ -1,8 +1,7 @@
 baseURL = "https://mhlimon.com"
-title = "রাফখাতা"
+title = "mhlimon"
 theme = "PaperMod"
-[pagination]
-  pagerSize = 10
+paginate = 10
 enableRobotsTXT = true
 enableGitInfo = true
 
@@ -14,8 +13,8 @@ hasCJKLanguage = true
   home = ["HTML", "RSS", "JSON"]
 
 [params]
-  author = "মেহেদী হোসেন লিমন"
-  description = "রাফখাতা — বাংলা সাহিত্য, প্রযুক্তি নোট, আরবি শিক্ষা এবং জীবনের ছোট ছোট গল্প।"
+  author = "Mehedi Hossen Limon"
+  description = "Power plant engineer. Talibul ilm. Writing about life, Islam, and the world between two classrooms."
   defaultTheme = "auto"
   disableThemeToggle = false
   ShowReadingTime = true
@@ -36,7 +35,12 @@ hasCJKLanguage = true
   ShowAllPagesInArchive = true
   mainSections = ["bangla", "tech"]
 
-  # Custom CSS and JS
+  # Google Analytics — replace with your real ID
+  googleAnalytics = "G-XXXXXXXXXX"
+
+  # Profile photo — upload your photo as static/images/avatar.jpg
+  # avatar = "/images/avatar.jpg"
+
   assets.disableFingerprinting = true
 
   # Search
@@ -48,13 +52,21 @@ hasCJKLanguage = true
   fuseOpts.minMatchCharLength = 1
   fuseOpts.keys = ["title", "permalink", "summary", "content"]
 
+  # Open Graph image (create a 1200x630 image, upload to static/images/)
+  images = ["/images/og-image.png"]
+
   [params.homeInfoParams]
-    Title = "মেহেদী হোসেন লিমন"
-    Content = "প্রকৌশলী · লেখক · আরবি শিক্ষার্থী — স্বাগতম রাফখাতায়"
+    Title = "Mehedi Hossen Limon"
+    Content = "Power plant engineer · তালিবুল ইলম · Writing about life and Islam"
 
   [[params.socialIcons]]
     name = "linkedin"
     url = "https://linkedin.com/in/mhlimon"
+
+  [[params.socialIcons]]
+    name = "facebook"
+    url = "https://fb.com/mehedihossen.limon"
+
   [[params.socialIcons]]
     name = "rss"
     url = "/index.xml"
@@ -66,7 +78,7 @@ hasCJKLanguage = true
 
   [params.editPost]
     URL = "https://github.com/mhlimon/mhlimon/edit/main/content"
-    Text = "✏️ Edit this post"
+    Text = "✏️ Edit"
     appendFilePath = true
 
 # ── NAVIGATION ──
@@ -77,12 +89,12 @@ hasCJKLanguage = true
   weight = 1
 [[menu.main]]
   identifier = "bangla"
-  name = "বাংলা সাহিত্য"
+  name = "বাংলা"
   url = "/bangla/"
   weight = 2
 [[menu.main]]
   identifier = "tech"
-  name = "Tech Blog"
+  name = "Tech"
   url = "/tech/"
   weight = 3
 [[menu.main]]
@@ -106,13 +118,18 @@ hasCJKLanguage = true
   url = "/cv/"
   weight = 7
 [[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 8
+[[menu.main]]
   identifier = "search"
   name = "🔍"
   url = "/search/"
-  weight = 8
+  weight = 9
 [[menu.main]]
   identifier = "admin"
-  name = "⚙ Admin"
+  name = "⚙"
   url = "/admin/"
   weight = 99
 
@@ -132,4 +149,3 @@ hasCJKLanguage = true
     guessSyntax = true
     lineNos = true
     style = "monokai"
-
