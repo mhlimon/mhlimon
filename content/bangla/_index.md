@@ -1,4 +1,15 @@
 ---
-title: "বাংলা সাহিত্য ও প্রবন্ধ"
-description: "মেহেদী হোসেন লিমনের বাংলা লেখার সংগ্রহ — সাহিত্য, ইসলাম, সমাজ ও জীবনের গল্প।"
+title: "রাফখাতা"
+description: "বাংলা সাহিত্য, প্রবন্ধ, ইসলাম ও জীবনচিন্তা"
+layout: list
+ShowToc: false
 ---
+
+{{< rawhtml >}}
+<div style="text-align: center; margin: 60px 0 50px;">
+    <h1 style="font-size: 2.8rem; margin-bottom: 12px;">রাফখাতা</h1>
+    <p style="font-size: 1.25rem; color: var(--ink-muted); max-width: 600px; margin: 0 auto;">
+        অপরিপক্ক কিন্তু সৎ লেখালেখির ডায়েরি
+    </p>
+</div>
+{{< /rawhtml >}}
