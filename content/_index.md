@@ -6,14 +6,14 @@ draft: false
 
 {{< rawhtml >}}
 <div style="text-align: center; margin: 100px 0 80px; padding: 0 20px;">
-    <h1 style="font-size: 3.4rem; margin-bottom: 16px; font-family: var(--font-serif); line-height: 1.1; color: var(--ink);">
+    <h1 style="font-size: 3.4rem; margin-bottom: 16px; font-family: var(--font-serif); line-height: 1.1;">
         Mehedi Hossen Limon
     </h1>
-    <p style="font-size: 1.48rem; color: var(--ink-muted); max-width: 720px; margin: 0 auto 30px; line-height: 1.65;">
+    <p style="font-size: 1.48rem; color: var(--ink-muted); max-width: 720px; margin: 0 auto 35px; line-height: 1.65;">
         Power Plant Instrumentation & Control Engineer<br>
         তালিবুল ইলম • লেখক
     </p>
-    <a href="/about/" style="background: var(--accent); color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: 1.05rem;">
+    <a href="/about/" style="background: var(--accent); color: white; padding: 14px 34px; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: 1.1rem;">
         About Me →
     </a>
 </div>
@@ -23,10 +23,10 @@ draft: false
 
 সাহিত্য, জীবনচিন্তা, ইলম ও দুনিয়ার পর্যবেক্ষণ।
 
-{{< recent "bangla" 6 >}}
+{{< list "bangla" >}}
 
-<div style="text-align: right; margin: 8px 0 50px;">
-    <a href="/bangla/" style="color: var(--accent); font-weight: 500;">সব লেখা দেখুন →</a>
+<div style="text-align: right; margin: 20px 0 60px;">
+    <a href="/bangla/" style="color: var(--accent); font-weight: 500;">সব বাংলা লেখা দেখুন →</a>
 </div>
 
 ---
@@ -35,9 +35,9 @@ draft: false
 
 পাওয়ার প্ল্যান্টের I&C, Electrical Maintenance, Relay Coordination এবং বাস্তব অভিজ্ঞতা।
 
-{{< recent "tech" 5 >}}
+{{< list "tech" >}}
 
-<div style="text-align: right; margin: 8px 0 50px;">
+<div style="text-align: right; margin: 20px 0 60px;">
     <a href="/tech/" style="color: var(--accent); font-weight: 500;">সব টেক নোট দেখুন →</a>
 </div>
 
@@ -45,7 +45,7 @@ draft: false
 
 ## দুই জগতের যাত্রী
 
-দিনে পাওয়ার প্ল্যান্টে Instrumentation & Control সিস্টেম নিয়ে কাজ করি। বাকি সময় মাদ্রাসায় ইলম শিখি এবং লিখি। এই সাইটে আমার দুই জগতের চিন্তা, অভিজ্ঞতা এবং শেখা জিনিসগুলো একসাথে পাবেন।
+দিনে পাওয়ার প্ল্যান্টে Instrumentation & Control সিস্টেম নিয়ে কাজ করি। বাকি সময় মাদ্রাসায় ইলম শিখি এবং লিখি। এই সাইটে আমার দুই জগতের চিন্তা ও অভিজ্ঞতা একসাথে পাবেন।
 
 [আমার পুরো পরিচয় দেখুন →](/about/)
 
@@ -53,12 +53,12 @@ draft: false
 
 ## Connect
 
-<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 40px;">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 50px;">
 
-<a href="https://linkedin.com/in/mhlimon" target="_blank" style="padding: 12px 24px; border: 1px solid var(--border-mid); border-radius: 8px; text-decoration: none; color: var(--ink); font-weight: 500;">🔗 LinkedIn</a>
+<a href="https://linkedin.com/in/mhlimon" target="_blank" style="padding: 12px 26px; border: 1px solid var(--border-mid); border-radius: 8px; text-decoration: none; color: var(--ink);">🔗 LinkedIn</a>
 
-<a href="https://fb.com/mehedihossen.limon" target="_blank" style="padding: 12px 24px; border: 1px solid var(--border-mid); border-radius: 8px; text-decoration: none; color: var(--ink); font-weight: 500;">📘 Facebook</a>
+<a href="https://fb.com/mehedihossen.limon" target="_blank" style="padding: 12px 26px; border: 1px solid var(--border-mid); border-radius: 8px; text-decoration: none; color: var(--ink);">📘 Facebook</a>
 
-<a href="/cv/" style="padding: 12px 24px; border: 1px solid var(--border-mid); border-radius: 8px; text-decoration: none; color: var(--ink); font-weight: 500;">📄 CV / Portfolio</a>
+<a href="/cv/" style="padding: 12px 26px; border: 1px solid var(--border-mid); border-radius: 8px; text-decoration: none; color: var(--ink);">📄 CV / Portfolio</a>
 
 </div>
