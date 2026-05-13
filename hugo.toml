@@ -1,14 +1,10 @@
 baseURL = "https://mhlimon.com"
 title = "MH Limon"
 theme = "PaperMod"
+languageCode = "bn-bd"
+defaultContentLanguage = "bn"
 
-# নতুন ব্র্যান্ডিং
-[languages.en]
-  languageCode = "en"
-  title = "MH Limon"
-  description = "Power Plant I&C Engineer • তালিবুল ইলম • Writer"
-
-# পেজিনেশন ফিক্স (আগের এররের জন্য)
+# পেজিনেশন
 [pagination]
   pagerSize = 10
 
@@ -44,22 +40,31 @@ theme = "PaperMod"
   facebook = "https://fb.com/mehedihossen.limon"
   github = "https://github.com/mhlimon"
 
-# PaperMod কনফিগারেশন (নতুন লুক)
+# ========================
+# PaperMod কনফিগারেশন
+# ========================
 [params]
-  description = "Engineer • তালিবুল ইলম • Writer"
   author = "Mehedi Hossen Limon"
+  description = "Power Plant I&C Engineer • তালিবুল ইলম • Writer"
   defaultTheme = "light"
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
   ShowToc = true
+  ShowBreadCrumbs = true
 
-  # নতুন কালার স্কিম (আপনার ব্র্যান্ডের জন্য)
-  accentColor = "#2c5f2d"        # Deep Green (ইলম + প্রকৃতি)
-  mainColor = "#1e3a8a"           # Professional Blue
-
-  # হোমপেজ
-  homeInfoParams:
+  # হোমপেজ হিরো সেকশন
+  [params.homeInfoParams]
     Title = "Mehedi Hossen Limon"
-    Content = "Power Plant Engineer by profession.<br>তালিবুল ইলম by passion.<br>লেখক by necessity."
+    Content = "Instrumentation & Control Engineer by profession.<br>তালিবুল ইলম by passion.<br>লেখক by necessity."
+
+  # কালার ও স্টাইল
+  [params.style]
+    accentColor = "#2c5f2d"
+
+# ল্যাঙ্গুয়েজ সেটিং (বাংলা সাপোর্ট)
+[languages.bn]
+  languageCode = "bn-bd"
+  title = "MH Limon"
+  description = "পাওয়ার প্ল্যান্ট ইঞ্জিনিয়ার • তালিবুল ইলম • লেখক"
