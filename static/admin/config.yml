@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: mhlimon/mhlimon
+  name: git-gateway
   branch: main
   # For GitHub Pages with custom domain, use:
   # base_url: https://mhlimon.com
