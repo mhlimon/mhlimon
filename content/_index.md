@@ -1,48 +1,64 @@
 ---
 title: ""
-description: "Power Plant I&C Engineer • তালিবুল ইলম • Writer"
+description: "Instrumentation & Control Engineer | Talibul Ilm | Writer"
 draft: false
 ---
 
 {{< rawhtml >}}
-<div style="text-align: center; margin: 80px 0 50px;">
-    <h1 style="font-size: 2.9rem; margin-bottom: 12px; font-family: var(--font-serif);">Mehedi Hossen Limon</h1>
-    <p style="font-size: 1.35rem; color: var(--ink-muted); max-width: 620px; margin: 0 auto; line-height: 1.6;">
-        Instrumentation & Control Engineer by profession<br>
-        তালিবুল ইলম by passion • লেখক by necessity
+<div style="text-align: center; margin: 100px 0 80px; padding: 0 20px;">
+    <h1 style="font-size: 3.4rem; margin-bottom: 16px; font-family: var(--font-serif); line-height: 1.1; color: var(--ink);">
+        Mehedi Hossen Limon
+    </h1>
+    <p style="font-size: 1.48rem; color: var(--ink-muted); max-width: 720px; margin: 0 auto 30px; line-height: 1.65;">
+        Power Plant Instrumentation & Control Engineer<br>
+        তালিবুল ইলম • লেখক
     </p>
+    <a href="/about/" style="background: var(--accent); color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: 1.05rem;">
+        About Me →
+    </a>
 </div>
 {{< /rawhtml >}}
 
-## Latest from রাফখাতা
+## রাফখাতা — সাম্প্রতিক লেখা
 
-সাহিত্য, চিন্তাভাবনা এবং ইলমের আলোয় দেখা জীবন।
+সাহিত্য, জীবনচিন্তা, ইলম ও দুনিয়ার পর্যবেক্ষণ।
 
-- [সব রাফখাতা দেখুন →](/bangla/)
-- [সাম্প্রতিক লেখাগুলো](/bangla/)
+{{< recent "bangla" 6 >}}
+
+<div style="text-align: right; margin: 8px 0 50px;">
+    <a href="/bangla/" style="color: var(--accent); font-weight: 500;">সব লেখা দেখুন →</a>
+</div>
 
 ---
 
 ## Tech & Engineering Notes
 
-পাওয়ার প্ল্যান্ট, ইন্সট্রুমেন্টেশন, কন্ট্রোল সিস্টেম এবং প্রযুক্তির অভিজ্ঞতা।
+পাওয়ার প্ল্যান্টের I&C, Electrical Maintenance, Relay Coordination এবং বাস্তব অভিজ্ঞতা।
 
-- [সব টেক লেখা দেখুন →](/tech/)
-- [সাম্প্রতিক টেক নোট](/tech/)
+{{< recent "tech" 5 >}}
+
+<div style="text-align: right; margin: 8px 0 50px;">
+    <a href="/tech/" style="color: var(--accent); font-weight: 500;">সব টেক নোট দেখুন →</a>
+</div>
 
 ---
 
-## About Me
+## দুই জগতের যাত্রী
 
-আমি দুই জগতের যাত্রী — দিনে পাওয়ার প্ল্যান্টে ইঞ্জিনিয়ারিং, আর বাকি সময় ইলম ও লেখালেখি।
+দিনে পাওয়ার প্ল্যান্টে Instrumentation & Control সিস্টেম নিয়ে কাজ করি। বাকি সময় মাদ্রাসায় ইলম শিখি এবং লিখি। এই সাইটে আমার দুই জগতের চিন্তা, অভিজ্ঞতা এবং শেখা জিনিসগুলো একসাথে পাবেন।
 
-[আমার পুরো পরিচয় →](/about/)
+[আমার পুরো পরিচয় দেখুন →](/about/)
 
 ---
 
 ## Connect
 
-- [LinkedIn](https://linkedin.com/in/mhlimon) — প্রফেশনাল  
-- [Facebook](https://fb.com/mehedihossen.limon) — সাহিত্য ও আলোচনা  
-- [GitHub](https://github.com/mhlimon) — কোড ও প্রজেক্ট  
-- [CV / Portfolio](/cv/)
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 40px;">
+
+<a href="https://linkedin.com/in/mhlimon" target="_blank" style="padding: 12px 24px; border: 1px solid var(--border-mid); border-radius: 8px; text-decoration: none; color: var(--ink); font-weight: 500;">🔗 LinkedIn</a>
+
+<a href="https://fb.com/mehedihossen.limon" target="_blank" style="padding: 12px 24px; border: 1px solid var(--border-mid); border-radius: 8px; text-decoration: none; color: var(--ink); font-weight: 500;">📘 Facebook</a>
+
+<a href="/cv/" style="padding: 12px 24px; border: 1px solid var(--border-mid); border-radius: 8px; text-decoration: none; color: var(--ink); font-weight: 500;">📄 CV / Portfolio</a>
+
+</div>
