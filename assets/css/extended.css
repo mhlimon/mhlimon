@@ -1,0 +1,59 @@
+/* ====================== MH Limon - Custom Professional Styling ====================== */
+
+:root {
+    --accent: #2c5f2d;
+    --accent-light: #4a7c4b;
+    --paper-warm: #f8f4eb;
+}
+
+/* হোমপেজ হিরো আরও সুন্দর */
+.hero-section {
+    background: linear-gradient(135deg, #f8f4eb 0%, #e8f0e8 100%);
+    border-radius: 16px;
+    padding: 60px 20px;
+    margin-bottom: 50px;
+}
+
+/* পোস্ট লিস্ট কার্ড স্টাইল */
+.article-list .article {
+    border-radius: 12px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06) !important;
+    transition: all 0.3s ease;
+}
+
+.article-list .article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(44, 95, 45, 0.12) !important;
+    border-color: var(--accent) !important;
+}
+
+/* বাংলা টেক্সট আরও সুন্দর */
+body, p, h1, h2, h3, .article-content {
+    font-family: "Noto Sans Bengali", system-ui, -apple-system, sans-serif;
+    line-height: 1.85;
+}
+
+/* ডাবল টাইটেল সমস্যা সমাধান */
+.page-header h1:first-of-type {
+    display: none;
+}
+
+/* মেটা ইনফো সুন্দর */
+.meta {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* বাটন স্টাইল */
+.btn-primary {
+    background: var(--accent);
+    color: white;
+    border-radius: 50px;
+    padding: 12px 32px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: #1e3f1f;
+    transform: translateY(-2px);
+}
