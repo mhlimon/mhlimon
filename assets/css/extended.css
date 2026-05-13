@@ -57,3 +57,39 @@ body, p, h1, h2, h3, .article-content {
     background: #1e3f1f;
     transform: translateY(-2px);
 }
+
+/* Bangla List Custom Card */
+.article-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 28px;
+    margin-top: 20px;
+}
+
+.article-list .article {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.article-list .article:hover {
+    border-color: #2c5f2d;
+    box-shadow: 0 10px 25px rgba(44, 95, 45, 0.1);
+    transform: translateY(-3px);
+}
+
+.article-list h2 {
+    font-size: 1.35rem;
+    line-height: 1.4;
+}
+
+.article-list h2 a {
+    color: #1f2a1f;
+    text-decoration: none;
+}
+
+.article-list h2 a:hover {
+    color: #2c5f2d;
+}
