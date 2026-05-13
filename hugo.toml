@@ -53,6 +53,7 @@ defaultContentLanguage = "bn"
   ShowCodeCopyButtons = true
   ShowToc = true
   ShowBreadCrumbs = true
+  customCSS = ["css/extended.css"]
 
   # হোমপেজ হিরো সেকশন
   [params.homeInfoParams]
