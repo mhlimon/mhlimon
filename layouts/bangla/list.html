@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="bangla-list-page">
+    <div style="text-align: center; margin: 50px 0 60px;">
+        <h1 style="font-size: 2.8rem; margin-bottom: 10px;">রাফখাতা</h1>
+        <p style="font-size: 1.25rem; color: var(--ink-muted); max-width: 600px; margin: 0 auto;">
+            অপরিপক্ক কিন্তু সৎ লেখালেখির ডায়েরি
+        </p>
+    </div>
+
+    <div class="article-list">
+        {{ range .Paginator.Pages }}
+        <article class="article">
+            <h2 style="margin-bottom: 8px;">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h2>
+            
+            <div class="meta" style="margin-bottom: 12px; color: #666; font-size: 0.95rem;">
+                {{ .Date.Format "2 January 2006" }} 
+                • {{ .ReadingTime }} মিনিট
+            </div>
+
+            <p style="color: #444; line-height: 1.75; margin-bottom: 16px;">
+                {{ .Summary | plainify | truncate 220 }}...
+            </p>
+
+            <a href="{{ .RelPermalink }}" style="color: #2c5f2d; font-weight: 500;">
+                আরও পড়ুন →
+            </a>
+        </article>
+        {{ end }}
+    </div>
+
+    <!-- Pagination -->
+    {{ template "_internal/pagination.html" . }}
+</div>
+{{ end }}
