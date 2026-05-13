@@ -23,7 +23,10 @@ draft: false
 
 সাহিত্য, জীবনচিন্তা, ইলম ও দুনিয়ার পর্যবেক্ষণ।
 
-{{< list "bangla" >}}
+- **[দুঃস্বপ্ন](/bangla/2025-08-01-dushshopno/)** — 1 August 2025
+- **[আশীর্বাদ নাকি অভিশাপ?](/bangla/2025-02-07-ashirbad/)** — Feb 2025
+- **[পরীক্ষা](/bangla/2025-01-30-porikkha/)** — Jan 2025
+- **[আশা](/bangla/2025-01-30-asha/)** — Jan 2025
 
 <div style="text-align: right; margin: 20px 0 60px;">
     <a href="/bangla/" style="color: var(--accent); font-weight: 500;">সব বাংলা লেখা দেখুন →</a>
@@ -33,9 +36,9 @@ draft: false
 
 ## Tech & Engineering Notes
 
-পাওয়ার প্ল্যান্টের I&C, Electrical Maintenance, Relay Coordination এবং বাস্তব অভিজ্ঞতা।
+পাওয়ার প্ল্যান্টের I&C, Electrical Maintenance এবং বাস্তব অভিজ্ঞতা।
 
-{{< list "tech" >}}
+- **[OT Cybersecurity — When Physical Systems Get Hacked](/tech/ot-cybersecurity/)** — Sep 2024
 
 <div style="text-align: right; margin: 20px 0 60px;">
     <a href="/tech/" style="color: var(--accent); font-weight: 500;">সব টেক নোট দেখুন →</a>
