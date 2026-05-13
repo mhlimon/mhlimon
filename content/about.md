@@ -1,6 +1,6 @@
 ---
-title: "About"
-description: "Power plant I&C Engineer, তালিবুল ইলম, and writer — Mehedi Hossen Limon"
+title: "About Me"
+description: "Power Plant I&C Engineer, তালিবুল ইলম, and Writer"
 date: 2026-01-01
 draft: false
 ShowToc: false
