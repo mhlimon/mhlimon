@@ -7,7 +7,7 @@ draft: false
 {{< rawhtml >}}
 <div style="text-align: center; margin: 90px 0 70px;">
     <img src="/images/profile.jpg" alt="Mehedi Hossen Limon" 
-         style="width: 165px; height: 165px; border-radius: 50%; border: 5px solid #2c5f2d; margin-bottom: 25px; box-shadow: 0 8px 25px rgba(0,0,0,0.12);">
+         style="width: 170px; height: 170px; border-radius: 50%; object-fit: cover; border: 5px solid #2c5f2d;">
     
     <h1 style="font-size: 3.2rem; margin-bottom: 10px;">Mehedi Hossen Limon</h1>
     <p style="font-size: 1.4rem; color: #444; max-width: 680px; margin: 0 auto 25px; line-height: 1.6;">
