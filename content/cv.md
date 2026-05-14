@@ -1,6 +1,6 @@
 ---
 title: "CV — Mehedi Hossen Limon"
-description: "Electrical Engineer · OT/ICS Security Specialist · Bangladesh"
+description: "Instrumentation & Control Engineer, Electrical Maintenance Engineer · OT/ICS Security Enthusiast · Bangladesh"
 date: 2026-01-01
 draft: false
 ---
@@ -44,10 +44,10 @@ draft: false
 <div class="cv-page">
 
 <div class="cv-header-block">
-  <div class="cv-avatar-lg">মহ</div>
+  <div class="cv-avatar-lg">MHL</div>
   <div class="cv-name-block">
     <h2>Mehedi Hossen Limon</h2>
-    <p>Electrical Engineer · OT/ICS Security Specialist · Bangla Writer · Based in Bangladesh</p>
+    <p>Instrumentation & Control Engineer, Electrical Maintenance Engineer · OT/ICS Security Enthusiast · Bangla Writer · Based in Bangladesh</p>
     <div class="cv-contacts">
       <a href="https://mhlimon.com" target="_blank">🌐 mhlimon.com</a>
       <a href="https://linkedin.com/in/mhlimon" target="_blank">🔗 LinkedIn</a>
@@ -59,36 +59,36 @@ draft: false
 </div>
 
 <h3 class="cv-section-h">Professional Summary</h3>
-<p style="font-size:14px;color:var(--ink-soft);line-height:1.8">Electrical engineer with hands-on experience in power systems, substation design, and industrial automation in Bangladesh. Specialized focus on Operational Technology (OT) and ICS cybersecurity — bridging the gap between traditional engineering and modern security requirements. Parallel to engineering, I write in Bangla on topics spanning Islam, society, literature, and technology education.</p>
+<p style="font-size:14px;color:var(--ink-soft);line-height:1.8">Electrical & Electronic engineer with hands-on experience in power plant maintenance, electrical maintenance, instrumentation and industrial automation in Bangladesh. Specialized focus on Operational Technology (OT) and ICS cybersecurity — bridging the gap between traditional engineering and modern security requirements. Parallel to engineering, I write in Bangla on topics spanning Islam, society, literature, and technology education.</p>
 
 <h3 class="cv-section-h">Work Experience</h3>
 
 <div class="cv-exp">
   <div class="cv-exp-hd">
-    <div class="cv-exp-title">Electrical Engineer</div>
+    <div class="cv-exp-title">Instrumentation & Control Engineer</div>
     <div class="cv-exp-period">2022 — Present</div>
   </div>
   <div class="cv-exp-co">Power & Infrastructure Sector, Bangladesh</div>
   <ul class="cv-exp-pts">
-    <li>Design and commissioning of medium and high voltage substations</li>
-    <li>Protection relay coordination and setting calculations (overcurrent, differential, distance)</li>
-    <li>SCADA and industrial control system integration and commissioning</li>
-    <li>OT/ICS security assessments based on IEC 62443 framework</li>
-    <li>Technical documentation, SLD preparation, and project reporting</li>
+    <li>Preventive, Predictive and Condition based maintenance of Instruments, sensors etc</li>
+    <li>Maintenance & Troubleshooting of Control System</li>
+    <li>Energy Audit & ISO 9001,14001,45001 Internal Audit</li>
+    <li>OT/ICS security assessments of power plant</li>
+    <li>Technical documentation, Workforce management, and reporting</li>
   </ul>
 </div>
 
 <div class="cv-exp">
   <div class="cv-exp-hd">
-    <div class="cv-exp-title">Junior Electrical Engineer</div>
-    <div class="cv-exp-period">2019 — 2022</div>
+    <div class="cv-exp-title">Electrical Maintenance Engineer</div>
+    <div class="cv-exp-period">2020 — 2021</div>
   </div>
-  <div class="cv-exp-co">Engineering Firm, Bangladesh</div>
+  <div class="cv-exp-co">Combined Cycle Power Plant</div>
   <ul class="cv-exp-pts">
-    <li>Electrical system design for industrial and commercial construction projects</li>
-    <li>Load flow analysis, short circuit calculations, and equipment sizing</li>
-    <li>Site supervision, punch list management, and contractor coordination</li>
-    <li>AutoCAD Electrical drafting and design review</li>
+    <li>Maintenance & Troubleshooting of power plant electrical system</li>
+    <li>Substation maintenance</li>
+    <li>Relay Coordination</li>
+    <li>Technical documentation, Workforce management, and reporting</li>
   </ul>
 </div>
 
@@ -99,11 +99,11 @@ draft: false
     <div style="font-size:11px;font-family:var(--font-mono);color:var(--ink-faint);padding-top:2px">2015–2019</div>
     <div>
       <div style="font-size:14px;font-weight:600;color:var(--ink)">B.Sc. in Electrical &amp; Electronic Engineering</div>
-      <div style="font-size:12px;color:var(--ink-muted);font-family:var(--font-serif);font-style:italic">University, Bangladesh</div>
+      <div style="font-size:12px;color:var(--ink-muted);font-family:var(--font-serif);font-style:italic">Bangladesh University of Engineering & Technology</div>
     </div>
   </div>
   <div style="display:grid;grid-template-columns:100px 1fr;gap:16px;padding:12px 0">
-    <div style="font-size:11px;font-family:var(--font-mono);color:var(--ink-faint);padding-top:2px">2013–2015</div>
+    <div style="font-size:11px;font-family:var(--font-mono);color:var(--ink-faint);padding-top:2px">2013–2014</div>
     <div>
       <div style="font-size:14px;font-weight:600;color:var(--ink)">Higher Secondary Certificate (HSC) — Science</div>
     </div>
