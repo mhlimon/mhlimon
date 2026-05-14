@@ -5,13 +5,13 @@ draft: false
 ---
 
 {{< rawhtml >}}
-<div style="text-align: center; margin: 90px 0 70px;">
+<div style="text-align: center; margin: 80px 0 70px;">
     <img src="/images/profile.jpg" alt="Mehedi Hossen Limon" 
-         style="width: 170px; height: 170px; border-radius: 50%; object-fit: cover; border: 5px solid #2c5f2d;">
+         style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 6px solid #2c5f2d; margin-bottom: 25px; box-shadow: 0 15px 35px rgba(0,0,0,0.15);">
     
-    <h1 style="font-size: 3.2rem; margin-bottom: 10px;">Mehedi Hossen Limon</h1>
-    <p style="font-size: 1.4rem; color: #444; max-width: 680px; margin: 0 auto 25px; line-height: 1.6;">
-        Power Plant I&C Engineer<br>
+    <h1 style="font-size: 3.3rem; margin-bottom: 12px;">Mehedi Hossen Limon</h1>
+    <p style="font-size: 1.45rem; color: #444; max-width: 720px; margin: 0 auto 30px; line-height: 1.65;">
+        Power Plant Instrumentation & Control Engineer<br>
         তালিবুল ইলম • লেখক
     </p>
 </div>
