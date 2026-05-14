@@ -1,6 +1,6 @@
 ---
 title: ""
-description: "Instrumentation & Control Engineer | Talibul Ilm | Writer"
+description: "Engineer | Talibul Ilm | Writer"
 draft: false
 ---
 
@@ -11,7 +11,7 @@ draft: false
     
     <h1 style="font-size: 3.3rem; margin-bottom: 12px;">Mehedi Hossen Limon</h1>
     <p style="font-size: 1.45rem; color: #444; max-width: 720px; margin: 0 auto 30px; line-height: 1.65;">
-        Power Plant Engineer<br>
+        প্রকৌশলী<br>
         তালিবুল ইলম • লেখক
     </p>
 </div>
