@@ -45,7 +45,7 @@ defaultContentLanguage = "bn"
 # ========================
 [params]
   author = "Mehedi Hossen Limon"
-  description = "Power Plant I&C Engineer • তালিবুল ইলম • Writer"
+  description = "Power Plant Engineer • তালিবুল ইলম • Writer"
   defaultTheme = "light"
   ShowReadingTime = true
   ShowShareButtons = true
@@ -58,7 +58,7 @@ defaultContentLanguage = "bn"
   # হোমপেজ হিরো সেকশন
   [params.homeInfoParams]
     Title = "Mehedi Hossen Limon"
-    Content = "Instrumentation & Control Engineer by profession.<br>তালিবুল ইলম by passion.<br>লেখক by necessity."
+    Content = "Engineer by profession.<br>তালিবুল ইলম by passion.<br>লেখক by necessity."
 
   # কালার ও স্টাইল
   [params.style]

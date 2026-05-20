@@ -1,6 +1,6 @@
 ---
 title: "About Me"
-description: "Power Plant I&C Engineer, তালিবুল ইলম, and Writer"
+description: "Power Plant Engineer, তালিবুল ইলম, and Writer"
 date: 2026-01-01
 draft: false
 ShowToc: false
@@ -101,11 +101,11 @@ ShowReadingTime: false
         <div>
             <div class="about-intro-name">Mehedi Hossen Limon</div>
             <div class="about-intro-title">
-                Instrumentation & Control Engineer — Power Plant<br>
+                Power Plant Engineer<br>
                 তালিবুল ইলম · লেখক
             </div>
             <div class="about-badges">
-                <span class="badge" style="background:var(--amber-bg);color:var(--amber)">⚡ I&C Engineer</span>
+                <span class="badge" style="background:var(--amber-bg);color:var(--amber)">⚡ Power Plant Engineer</span>
                 <span class="badge" style="background:var(--teal-bg);color:var(--teal)">🕌 তালিবুল ইলম</span>
                 <span class="badge" style="background:var(--accent-bg);color:var(--accent)">✍️ লেখক</span>
             </div>

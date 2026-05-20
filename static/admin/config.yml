@@ -17,7 +17,7 @@ collections:
 
   # ── বাংলা BLOG ──
   - name: "bangla"
-    label: "📖 বাংলা সাহিত্য"
+    label: "📖 প্রবন্ধ"
     label_singular: "বাংলা পোস্ট"
     folder: "content/bangla"
     create: true
