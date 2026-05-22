@@ -1,6 +1,6 @@
 ---
 title: "CV — Mehedi Hossen Limon"
-description: "Instrumentation & Control Engineer, Electrical Maintenance Engineer · OT/ICS Security Enthusiast · Bangladesh"
+description: "Instrumentation & Control Engineer, Electrical Maintenance Engineer · OT/ICS CyberSecurity Enthusiast · Bangladesh"
 date: 2026-01-01
 draft: false
 ---
@@ -112,12 +112,8 @@ draft: false
 
 <h3 class="cv-section-h">Technical Skills</h3>
 <div class="skill-bars">
-  <div class="skill-item-cv"><div class="skill-nm"><span>Power Systems</span><span>90%</span></div><div class="skill-bg"><div class="skill-fill" style="width:90%"></div></div></div>
-  <div class="skill-item-cv"><div class="skill-nm"><span>OT/ICS Security</span><span>80%</span></div><div class="skill-bg"><div class="skill-fill" style="width:80%"></div></div></div>
-  <div class="skill-item-cv"><div class="skill-nm"><span>SCADA / DCS / PLC</span><span>75%</span></div><div class="skill-bg"><div class="skill-fill" style="width:75%"></div></div></div>
-  <div class="skill-item-cv"><div class="skill-nm"><span>Protection &amp; Relay</span><span>80%</span></div><div class="skill-bg"><div class="skill-fill" style="width:80%"></div></div></div>
-  <div class="skill-item-cv"><div class="skill-nm"><span>AutoCAD Electrical</span><span>70%</span></div><div class="skill-bg"><div class="skill-fill" style="width:70%"></div></div></div>
-  <div class="skill-item-cv"><div class="skill-nm"><span>Technical Writing</span><span>85%</span></div><div class="skill-bg"><div class="skill-fill" style="width:85%"></div></div></div>
+  <div class="skill-item-cv"><div class="skill-nm"><span>Instrumentation & Control</span><span>80%</span></div><div class="skill-bg"><div class="skill-fill" style="width:90%"></div></div></div>
+  <div class="skill-item-cv"><div class="skill-nm"><span>Electrical Maintenance</span><span>70%</span></div><div class="skill-bg"><div class="skill-fill" style="width:80%"></div></div></div>
 </div>
 
 <h3 class="cv-section-h">Certifications</h3>
