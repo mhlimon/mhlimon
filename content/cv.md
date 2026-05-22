@@ -68,12 +68,12 @@ draft: false
     <div class="cv-exp-title">Instrumentation & Control Engineer</div>
     <div class="cv-exp-period">2022 — Present</div>
   </div>
-  <div class="cv-exp-co">Power & Infrastructure Sector, Bangladesh</div>
+  <div class="cv-exp-co">Combined Cycle Power Plant</div>
   <ul class="cv-exp-pts">
     <li>Preventive, Predictive and Condition based maintenance of Instruments, sensors etc</li>
     <li>Maintenance & Troubleshooting of Control System</li>
     <li>Energy Audit & ISO 9001,14001,45001 Internal Audit</li>
-    <li>OT/ICS security assessments of power plant</li>
+    <li>OT/ICS Cybersecurity assessments of power plant</li>
     <li>Technical documentation, Workforce management, and reporting</li>
   </ul>
 </div>
@@ -122,10 +122,7 @@ draft: false
 
 <h3 class="cv-section-h">Certifications</h3>
 <div class="cert-grid">
-  <div class="cert-card"><div class="cert-nm">IEC 62443 — Industrial Cybersecurity</div><div class="cert-org">ISA / Online Training</div><div class="cert-yr">2024</div></div>
-  <div class="cert-card"><div class="cert-nm">Protection Relay Coordination</div><div class="cert-org">Professional Development</div><div class="cert-yr">2023</div></div>
-  <div class="cert-card"><div class="cert-nm">SCADA Security Fundamentals</div><div class="cert-org">Online</div><div class="cert-yr">2024</div></div>
-  <div class="cert-card"><div class="cert-nm">AutoCAD Electrical</div><div class="cert-org">Autodesk Certified</div><div class="cert-yr">2021</div></div>
+  <div class="cert-card"><div class="cert-nm">Instrumentation & Control</div><div class="cert-org">ISA</div><div class="cert-yr">0000</div></div>
 </div>
 
 <h3 class="cv-section-h">Languages</h3>

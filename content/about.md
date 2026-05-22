@@ -1,6 +1,6 @@
 ---
 title: "About Me"
-description: "Power Plant Engineer, তালিবুল ইলম, and Writer"
+description: "Power Plant Engineer, Talibul Ilm, and Writer"
 date: 2026-01-01
 draft: false
 ShowToc: false
@@ -101,21 +101,21 @@ ShowReadingTime: false
         <div>
             <div class="about-intro-name">Mehedi Hossen Limon</div>
             <div class="about-intro-title">
-                Power Plant Engineer<br>
+                প্রকৌশলী<br>
                 তালিবুল ইলম · লেখক
             </div>
             <div class="about-badges">
-                <span class="badge" style="background:var(--amber-bg);color:var(--amber)">⚡ Power Plant Engineer</span>
+                <span class="badge" style="background:var(--amber-bg);color:var(--amber)">⚡ প্রকৌশলী</span>
                 <span class="badge" style="background:var(--teal-bg);color:var(--teal)">🕌 তালিবুল ইলম</span>
                 <span class="badge" style="background:var(--accent-bg);color:var(--accent)">✍️ লেখক</span>
             </div>
         </div>
     </div>
 
-    <h3 class="about-section-title">দুই জগতের যাত্রী</h3>
+    <h3 class="about-section-title">অনন্ত অসীমের এক যাত্রী</h3>
     <div class="about-body">
-        <p>আমি দুই জগতের মাঝখানে দাঁড়িয়ে আছি।</p>
-        <p>দিনের বেলা পাওয়ার প্ল্যান্টে কাজ করি — ইন্সট্রুমেন্টেশন, কন্ট্রোল সিস্টেম, প্রটেকশন রিলে, ইলেকট্রিক্যাল মেইন্টেন্যান্স। আর রাতে বা ফাঁকা সময়ে মাদ্রাসায় বসি, কুরআন-হাদিস পড়ি, আরবি শিখি।</p>
+        <p>এক ক্ষণিকের সফরে এসেছি। যেকোন সময় ওপারে চলে যাব। ব্যাগ গুছানোর সময় পাব কিনা বলতে পারছি না।</p>
+        <p></p>
         
         <div class="two-worlds">
             <div class="world-card" style="border-top: 3px solid var(--amber)">
@@ -124,18 +124,18 @@ ShowReadingTime: false
             </div>
             <div class="world-card" style="border-top: 3px solid var(--teal)">
                 <h4>🕌 Ilm World</h4>
-                <p>তালিবুল ইলম · কুরআন-হাদিস চর্চা · আরবি ভাষা · দুনিয়া ও দ্বীনের সমন্বয়</p>
+                <p>তালিবুল ইলম · দ্বীনি ইলম শিক্ষা ·</p>
             </div>
         </div>
 
-        <p>এই দুই জগতের অভিজ্ঞতা থেকেই লিখি। কখনো ইঞ্জিনিয়ারিংয়ের দৃষ্টিতে, কখনো ইলমের আলোয়।</p>
+        <p>চলার পথে যা পাই তাই থেকে শেখার চেষ্টা করি, সাথে সাথে কিছু লেখার। কখনো দুনিয়াবি দৃষ্টিতে, কখনো আখিরাতের যাত্রী হিসেবে। আমার পথচলার সঙ্গী কিছু লেখা এখানে জমা করছি।</p>
     </div>
 
     <h3 class="about-section-title">mhlimon.com</h3>
     <div class="about-body">
         <p>এটি আমার ব্যক্তিগত ডিজিটাল স্পেস। এখানে কোনো নির্দিষ্ট নিশ নেই — শুধু আমার চিন্তা, অভিজ্ঞতা এবং শেখা জিনিসগুলো লেখা আছে।</p>
         <p>বাংলায় লিখি কারণ এটা আমার মাতৃভাষা এবং চিন্তার সবচেয়ে স্বাভাবিক মাধ্যম।</p>
-        <p>সাহিত্য ও চিন্তাভাবনার অংশটির নাম <strong>রাফখাতা</strong> — অপরিপক্ক কিন্তু সৎ খাতা।</p>
+        <p>এলোমেলো কিছু লেখার নাম দিয়েছি <strong>রাফখাতা</strong></p>
     </div>
 
     <h3 class="about-section-title">Connect</h3>
