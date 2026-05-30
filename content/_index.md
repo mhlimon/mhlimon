@@ -17,6 +17,14 @@ draft: false
 </div>
 {{< /rawhtml >}}
 
+## Quick Start
+
+- [Start Here](/start-here/)
+- [রাফখাতা](/bangla/)
+- [Tech Notes](/tech/)
+- [Field Notes](/notes/)
+- [Topics](/topics/)
+
 ## রাফখাতা — সাম্প্রতিক লেখা
 
 - **[দুঃস্বপ্ন](/bangla/2025-08-01-dushshopno/)** — ১ আগস্ট ২০২৫

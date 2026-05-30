@@ -15,24 +15,34 @@ defaultContentLanguage = "bn"
   weight = 1
 
 [[menu.main]]
-  name = "About"
-  url = "/about/"
+  name = "Engineering"
+  url = "/engineering/"
   weight = 2
+
+[[menu.main]]
+  name = "Notes"
+  url = "/notes/"
+  weight = 3
 
 [[menu.main]]
   name = "রাফখাতা"
   url = "/bangla/"
-  weight = 3
+  weight = 4
 
 [[menu.main]]
-  name = "Tech"
-  url = "/tech/"
-  weight = 4
+  name = "Start Here"
+  url = "/start-here/"
+  weight = 5
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 6
 
 [[menu.main]]
   name = "CV"
   url = "/cv/"
-  weight = 5
+  weight = 7
 
 # সোশ্যাল লিঙ্ক
 [social]
