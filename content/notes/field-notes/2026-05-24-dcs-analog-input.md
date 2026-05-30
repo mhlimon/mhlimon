@@ -2,6 +2,14 @@
 title: "Troubleshooting an Ovation DCS Analog Input Bad Value"
 date: 2026-05-24
 draft: false
+
+categories:
+  - Field Notes
+
+tags:
+  - instrumentation
+  - dcs
+  - troubleshooting
 ---
 Today I investigated a CT fan motor current feedback issue in an Emerson Ovation DCS where the analog input showed BAD VALUE with frozen low current indication.
 
