@@ -110,11 +110,16 @@ draft: false
   </div>
 </div>
 
-<h3 class="cv-section-h">Technical Skills</h3>
-<div class="skill-bars">
-  <div class="skill-item-cv"><div class="skill-nm"><span>Instrumentation & Control</span><span>80%</span></div><div class="skill-bg"><div class="skill-fill" style="width:90%"></div></div></div>
-  <div class="skill-item-cv"><div class="skill-nm"><span>Electrical Maintenance</span><span>70%</span></div><div class="skill-bg"><div class="skill-fill" style="width:80%"></div></div></div>
-</div>
+## Areas of Practice
+
+- Instrumentation & Control Systems
+- Power Plant Electrical Maintenance
+- Industrial Automation & DCS
+- OT Cybersecurity
+- Control Valve & Actuator Maintenance
+- Relay Coordination & Protection Systems
+- Systems Thinking & Troubleshooting
+- Technical Documentation & Knowledge Management
 
 <h3 class="cv-section-h">Certifications</h3>
 <div class="cert-grid">
