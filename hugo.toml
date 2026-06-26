@@ -1,8 +1,8 @@
 baseURL = "https://mhlimon.com"
 title = "MH Limon"
 theme = "PaperMod"
-languageCode = "bn-bd"
-defaultContentLanguage = "bn"
+languageCode = "en"
+defaultContentLanguage = "en"
 
 # পেজিনেশন
 [pagination]
@@ -13,33 +13,26 @@ defaultContentLanguage = "bn"
   name = "Home"
   url = "/"
   weight = 1
-
 [[menu.main]]
   name = "Engineering"
   url = "/engineering/"
   weight = 2
-
 [[menu.main]]
   name = "Notes"
   url = "/notes/"
   weight = 3
-
 [[menu.main]]
   name = "Topics"
   url = "/topics/"
   weight = 4
-
 [[menu.main]]
   name = "রাফখাতা"
   url = "/bangla/"
   weight = 5
-
-
 [[menu.main]]
   name = "About"
   url = "/about/"
   weight = 6
-
 [[menu.main]]
   name = "CV"
   url = "/cv/"
@@ -65,8 +58,10 @@ defaultContentLanguage = "bn"
   ShowToc = true
   ShowBreadCrumbs = true
 
+  # Force main sections
+  mainSections = ["notes", "bangla", "engineering"]
 
-  # হোমপেজ হিরো সেকশন
+  # হোমপেজ হিরো সেকশন (you can keep or remove later)
   [params.homeInfoParams]
     Title = "Mehedi Hossen Limon"
     Content = "Engineering • Learning • Writing<br>Notes from a life spent learning."
@@ -75,7 +70,7 @@ defaultContentLanguage = "bn"
   [params.style]
     accentColor = "#2c5f2d"
 
-# ল্যাঙ্গুয়েজ সেটিং (বাংলা সাপোর্ট)
+# বাংলা ল্যাঙ্গুয়েজ সেটিং
 [languages.bn]
   languageCode = "bn-bd"
   title = "MH Limon"
