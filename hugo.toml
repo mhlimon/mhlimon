@@ -58,7 +58,6 @@ defaultContentLanguage = "en"
   ShowToc = true
   ShowBreadCrumbs = true
 
-  # Important for homepage
   mainSections = ["notes", "bangla", "engineering"]
 
   [params.homeInfoParams]
@@ -68,13 +67,13 @@ defaultContentLanguage = "en"
   [params.style]
     accentColor = "#2c5f2d"
 
-# English Language Definition (This was missing!)
+# English Language Definition (MUST HAVE)
 [languages.en]
   languageCode = "en"
   title = "MH Limon"
   description = "Power Plant Engineer • Talibul Ilm • Writer"
 
-# Bengali Language Definition
+# Bengali Language
 [languages.bn]
   languageCode = "bn-bd"
   title = "MH Limon"
