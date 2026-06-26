@@ -2,6 +2,7 @@
 title: ""
 description: "Engineering • Learning • Writing"
 draft: false
+layout: "home"
 ---
 
 {{< rawhtml >}}
