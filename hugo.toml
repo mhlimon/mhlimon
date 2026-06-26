@@ -58,19 +58,23 @@ defaultContentLanguage = "en"
   ShowToc = true
   ShowBreadCrumbs = true
 
-  # Force main sections
+  # Important for homepage
   mainSections = ["notes", "bangla", "engineering"]
 
-  # হোমপেজ হিরো সেকশন (you can keep or remove later)
   [params.homeInfoParams]
     Title = "Mehedi Hossen Limon"
     Content = "Engineering • Learning • Writing<br>Notes from a life spent learning."
 
-  # কালার ও স্টাইল
   [params.style]
     accentColor = "#2c5f2d"
 
-# বাংলা ল্যাঙ্গুয়েজ সেটিং
+# English Language Definition (This was missing!)
+[languages.en]
+  languageCode = "en"
+  title = "MH Limon"
+  description = "Power Plant Engineer • Talibul Ilm • Writer"
+
+# Bengali Language Definition
 [languages.bn]
   languageCode = "bn-bd"
   title = "MH Limon"
