@@ -4,11 +4,11 @@ theme = "PaperMod"
 languageCode = "en"
 defaultContentLanguage = "en"
 
-# পেজিনেশন
+# Pagination
 [pagination]
   pagerSize = 10
 
-# মেনু
+# Menu
 [[menu.main]]
   name = "Home"
   url = "/"
@@ -38,14 +38,14 @@ defaultContentLanguage = "en"
   url = "/cv/"
   weight = 7
 
-# সোশ্যাল লিঙ্ক
+# Social Links
 [social]
   linkedin = "https://linkedin.com/in/mhlimon"
   facebook = "https://fb.com/mehedihossen.limon"
   github = "https://github.com/mhlimon"
 
 # ========================
-# PaperMod কনফিগারেশন
+# PaperMod Configuration
 # ========================
 [params]
   author = "Mehedi Hossen Limon"
@@ -67,20 +67,22 @@ defaultContentLanguage = "en"
   [params.style]
     accentColor = "#2c5f2d"
 
-# English Language Definition (MUST HAVE)
+# English Language Definition
 [languages.en]
   languageCode = "en"
   title = "MH Limon"
-  description = "Power Plant Engineer • Talibul Ilm • Writer"
+  [languages.en.params]
+    description = "Power Plant Engineer • Talibul Ilm • Writer"
 
-# Bengali Language
+# Bengali Language Definition
 [languages.bn]
   languageCode = "bn-bd"
   title = "MH Limon"
-  description = "পাওয়ার প্ল্যান্ট ইঞ্জিনিয়ার • তালিবুল ইলম • লেখক"
+  [languages.bn.params]
+    description = "পাওয়ার প্ল্যান্ট ইঞ্জিনিয়ার • তালিবুল ইলম • লেখক"
 
 [outputs]
-home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON"]
 
 [taxonomies]
   tag = "tags"
