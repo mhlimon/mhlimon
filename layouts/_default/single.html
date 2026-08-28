@@ -1,5 +1,13 @@
 {{- define "main" }}
 
+{{/* ══ LANGUAGE DETECTION ══
+     A post is treated as Bengali if it lives in the bangla section, or its
+     title contains Bengali script — this covers older mixed-language posts
+     in sections like "engineering" without needing to touch every file.
+     Everything else (the growing English engineering/notes archive) gets
+     English UI chrome instead of always defaulting to Bengali. */}}
+{{- $isBn := or (eq .Section "bangla") (gt (len (findRE "[\\x{0980}-\\x{09FF}]" .Title 1)) 0) }}
+
 {{/* ── READING PROGRESS BAR ── */}}
 <div class="reading-bar" id="readingBar"></div>
 
@@ -9,9 +17,9 @@
   <header class="diary-header">
 
     <nav class="diary-breadcrumb">
-      <a href="/">মূলপাতা</a><span>›</span>
+      <a href="/">{{ if $isBn }}মূলপাতা{{ else }}Home{{ end }}</a><span>›</span>
       {{- with .Section }}
-      <a href="/{{ . }}/">{{ if eq . "bangla" }}বাংলা{{ else if eq . "tech" }}Tech{{ else }}{{ . }}{{ end }}</a><span>›</span>
+      <a href="/{{ . }}/">{{ if eq . "bangla" }}বাংলা{{ else if eq . "engineering" }}Engineering{{ else if eq . "notes" }}Notes{{ else }}{{ . | humanize }}{{ end }}</a><span>›</span>
       {{- end }}
       <span>{{ .Title | truncate 40 }}</span>
     </nav>
@@ -32,10 +40,10 @@
 
     <div class="diary-meta-row">
       <div class="diary-author-chip">
-        <div class="diary-author-avatar">মহ</div>
+        <div class="diary-author-avatar">{{ if $isBn }}মহ{{ else }}ML{{ end }}</div>
         <div>
-          <div class="diary-author-name">মেহেদী হোসেন লিমন</div>
-          <div class="diary-author-role">Engineer · Talibul Ilm · Writer</div>
+          <div class="diary-author-name">{{ if $isBn }}মেহেদী হোসেন লিমন{{ else }}Mehedi Hossen Limon{{ end }}</div>
+          <div class="diary-author-role">{{ if $isBn }}ইঞ্জিনিয়ার · তালিবুল ইলম · লেখক{{ else }}Engineer · Talibul Ilm · Writer{{ end }}</div>
         </div>
       </div>
       <div class="diary-meta-right">
@@ -47,12 +55,12 @@
         <span class="diary-meta-sep">·</span>
         <span class="diary-meta-item">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          {{ .ReadingTime }} মিনিট
+          {{ .ReadingTime }} {{ if $isBn }}মিনিট{{ else }}min read{{ end }}
         </span>
         {{- end }}
         {{- if .WordCount }}
         <span class="diary-meta-sep">·</span>
-        <span class="diary-meta-item">{{ .WordCount }} শব্দ</span>
+        <span class="diary-meta-item">{{ .WordCount }} {{ if $isBn }}শব্দ{{ else }}words{{ end }}</span>
         {{- end }}
       </div>
     </div>
@@ -75,7 +83,7 @@
   <footer class="diary-footer">
     {{- with .Params.tags }}
     <div class="diary-footer-tags">
-      <span class="diary-footer-tags-label">ট্যাগ:</span>
+      <span class="diary-footer-tags-label">{{ if $isBn }}ট্যাগ:{{ else }}Tags:{{ end }}</span>
       {{- range . }}
       <a href="/tags/{{ . | urlize }}/" class="diary-tag">{{ . }}</a>
       {{- end }}
@@ -83,7 +91,7 @@
     {{- end }}
 
     <div class="diary-share-row">
-      <span class="diary-share-label">শেয়ার করুন:</span>
+      <span class="diary-share-label">{{ if $isBn }}শেয়ার করুন:{{ else }}Share:{{ end }}</span>
       <a class="diary-share-btn" target="_blank" rel="noopener"
          href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink | absURL }}">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg> Facebook
@@ -92,8 +100,8 @@
          href="https://twitter.com/intent/tweet?text={{ .Title | urlize }}&url={{ .Permalink | absURL }}">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg> X
       </a>
-      <button class="diary-share-btn diary-copy-btn" onclick="copyLink(this)" data-url="{{ .Permalink | absURL }}">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg> লিংক কপি
+      <button class="diary-share-btn diary-copy-btn" onclick="copyLink(this)" data-url="{{ .Permalink | absURL }}" data-copied="{{ if $isBn }}✓ কপি হয়েছে{{ else }}✓ Copied{{ end }}">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg> {{ if $isBn }}লিংক কপি{{ else }}Copy link{{ end }}
       </button>
     </div>
   </footer>
@@ -115,13 +123,13 @@
   <div class="diary-postnav-inner">
     {{- if $prev }}
     <a href="{{ $prev.RelPermalink }}" class="diary-postnav-card diary-postnav-prev">
-      <div class="diary-postnav-dir">← আগের লেখা</div>
+      <div class="diary-postnav-dir">{{ if $isBn }}← আগের লেখা{{ else }}← Previous{{ end }}</div>
       <div class="diary-postnav-title">{{ $prev.Title | truncate 55 }}</div>
     </a>
     {{- else }}<div></div>{{- end }}
     {{- if $next }}
     <a href="{{ $next.RelPermalink }}" class="diary-postnav-card diary-postnav-next">
-      <div class="diary-postnav-dir">পরের লেখা →</div>
+      <div class="diary-postnav-dir">{{ if $isBn }}পরের লেখা →{{ else }}Next →{{ end }}</div>
       <div class="diary-postnav-title">{{ $next.Title | truncate 55 }}</div>
     </a>
     {{- else }}<div></div>{{- end }}
@@ -133,7 +141,7 @@
 {{- $related := .Site.RegularPages.Related . | first 3 }}
 {{- if $related }}
 <section class="diary-related">
-  <div class="diary-related-head">আরও পড়ুন</div>
+  <div class="diary-related-head">{{ if $isBn }}আরও পড়ুন{{ else }}Related{{ end }}</div>
   <div class="diary-related-grid">
     {{- range $related }}
     <a href="{{ .RelPermalink }}" class="diary-related-card">
@@ -162,7 +170,7 @@ window.addEventListener('scroll', () => {
 function copyLink(btn) {
   navigator.clipboard.writeText(btn.dataset.url).then(() => {
     const orig = btn.innerHTML;
-    btn.innerHTML = '✓ কপি হয়েছে';
+    btn.innerHTML = btn.dataset.copied || '✓ Copied';
     btn.style.cssText += ';background:var(--teal-bg)!important;color:var(--teal)!important;border-color:var(--teal)!important';
     setTimeout(() => { btn.innerHTML = orig; btn.style.cssText = btn.style.cssText.replace(/;?background[^;]+|;?color[^;]+|;?border-color[^;]+/g,''); }, 2200);
   });

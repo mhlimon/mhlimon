@@ -35,6 +35,7 @@
   --font-serif:  'Libre Baskerville', Georgia, serif;
   --font-mono:   'JetBrains Mono', monospace;
   --font-ar:     'Amiri', serif;
+  --font-bn:     'Noto Serif Bengali', 'Hind Siliguri', serif; /* used by projects/videos cards */
 
   --max-w:       1060px;
   --read-w:      680px;  /* ideal reading column width */

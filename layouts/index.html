@@ -1,161 +1,175 @@
-{{ define "main" }}
-{{ $bangla := where .Site.RegularPages "Section" "bangla" }}
-{{ $tech   := where .Site.RegularPages "Section" "tech" }}
-{{ $notes  := where .Site.RegularPages "Section" "notes" }}
+{{- define "main" }}
 
-<div class="home-wrap">
-
-  {{/* ── HERO ── */}}
-  <section class="hero-strip">
-    <div class="hero-inner">
-      <div class="hero-avatar">MHL</div>
-      <div>
-        <h1 class="hero-name">মেহেদী হোসেন লিমন</h1>
-        <p class="hero-sub">Engineer &nbsp;·&nbsp; Talibul Ilm &nbsp;·&nbsp; Writer</p>
-      </div>
-      <div class="hero-links">
-        {{ range .Site.Params.socialIcons }}
-        <a href="{{ .url }}" target="_blank" rel="noopener" class="hero-icon-link" aria-label="{{ .name }}">
-          {{- partial "svg.html" . -}}
-        </a>
-        {{ end }}
-        <a href="/cv/" class="hero-cta-btn">CV →</a>
-      </div>
+{{/* ══════════════════════════════════════
+     HERO STRIP
+══════════════════════════════════════ */}}
+<div class="hero-strip">
+  <div class="hero-inner">
+    <img src="/images/profile.jpg" alt="Mehedi Hossen Limon" class="hero-avatar" style="object-fit:cover">
+    <div>
+      <h2 class="hero-name">Mehedi Hossen Limon</h2>
+      <p class="hero-sub">Power Plant Engineer · Talibul Ilm · Writer</p>
     </div>
-  </section>
+    <div class="hero-links">
+      {{- with site.Params.social.linkedin }}
+      <a class="hero-icon-link" href="{{ . }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.11 20.45H3.56V9h3.55v11.45z"/></svg>
+      </a>
+      {{- end }}
+      {{- with site.Params.social.github }}
+      <a class="hero-icon-link" href="{{ . }}" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.56 2.36 1.11 2.93.85.09-.66.35-1.11.63-1.37-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.05a9.3 9.3 0 015 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
+      </a>
+      {{- end }}
+      {{- with site.Params.social.facebook }}
+      <a class="hero-icon-link" href="{{ . }}" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5H16l.5-3.5h-3V7.8c0-1 .3-1.8 1.8-1.8H16.6V2.8C16.3 2.8 15.3 2.7 14.2 2.7c-2.4 0-4.1 1.5-4.1 4.2v2.1H7.6v3.5h2.5V21h3.4z"/></svg>
+      </a>
+      {{- end }}
+      <a class="hero-cta-btn" href="/cv/">CV →</a>
+    </div>
+  </div>
+</div>
 
-  {{/* ── MAIN GRID ── */}}
-  <div class="home-grid">
+{{/* ══════════════════════════════════════
+     INTRO
+══════════════════════════════════════ */}}
+{{- if .Content }}
+<div class="post-content" style="max-width:var(--read-w);margin-bottom:36px">
+  {{ .Content }}
+</div>
+{{- end }}
 
-    {{/* ═══ LEFT / MAIN ═══ */}}
-    <main class="home-main">
+<div class="home-grid">
 
-      {{/* BANGLA POSTS */}}
-      {{ if $bangla }}
-      <section class="home-section">
-        <div class="section-head">
-          <h2 class="section-title">প্রবন্ধ</h2>
-          <a href="/bangla/" class="section-more">সব লেখা →</a>
-        </div>
+  {{/* ══════════════════════════════════════
+       MAIN COLUMN
+  ══════════════════════════════════════ */}}
+  <div class="home-main">
 
-        {{/* Featured first post */}}
-        {{ with (index $bangla 0) }}
-        <a href="{{ .RelPermalink }}" class="post-featured">
-          <div class="pf-label">সর্বশেষ লেখা</div>
-          <div class="post-meta">
-            {{ range first 1 .Params.tags }}<span class="post-tag tag-bn">{{ . }}</span>{{ end }}
-            <time class="post-date">{{ .Date.Format "2 January 2006" }}</time>
-          </div>
-          <h3 class="pf-title">{{ .Title }}</h3>
-          <p class="pf-excerpt">{{ .Summary | truncate 200 }}</p>
-        </a>
-        {{ end }}
-
-        {{/* Rest of bangla posts */}}
-        <div class="post-list">
-        {{ range (after 1 (first 4 $bangla)) }}
-          <a href="{{ .RelPermalink }}" class="post-row">
-            <div class="pr-date-col">
-              <time>{{ .Date.Format "Jan 2006" }}</time>
-            </div>
-            <div class="pr-body">
-              {{ range first 1 .Params.tags }}<span class="post-tag tag-bn">{{ . }}</span>{{ end }}
-              <span class="pr-title">{{ .Title }}</span>
-              <p class="pr-excerpt">{{ .Summary | truncate 120 }}</p>
-            </div>
-          </a>
-        {{ end }}
-        </div>
-      </section>
-      {{ end }}
-
-      <hr class="section-divider">
-
-      {{/* TECH POSTS */}}
-      {{ if $tech }}
-      <section class="home-section">
-        <div class="section-head">
-          <h2 class="section-title">Tech Blog</h2>
-          <a href="/engineering/" class="section-more">All posts →</a>
-        </div>
-        <div class="post-list">
-        {{ range first 3 $tech }}
-          <a href="{{ .RelPermalink }}" class="post-row">
-            <div class="pr-date-col">
-              <time>{{ .Date.Format "Jan 2006" }}</time>
-            </div>
-            <div class="pr-body">
-              {{ range first 1 .Params.tags }}<span class="post-tag tag-tech">{{ . }}</span>{{ end }}
-              <span class="pr-title">{{ .Title }}</span>
-              <p class="pr-excerpt">{{ .Summary | truncate 140 }}</p>
-            </div>
-          </a>
-        {{ end }}
-        </div>
-      </section>
-      {{ end }}
-
-    </main>
-
-    {{/* ═══ SIDEBAR ═══ */}}
-    <aside class="home-sidebar">
-
-      {{/* DAILY NOTES */}}
-      <div class="sb-block">
-        <div class="sb-head">Daily Notes</div>
-        {{ if $notes }}
-          {{ range first 6 $notes }}
-          <div class="note-entry">
-            <div class="note-date">{{ .Date.Format "2 Jan 2006" }}</div>
-            <div class="note-text">{{ .Title }}</div>
-            {{ with .Summary }}<div class="note-body">{{ . | truncate 80 }}</div>{{ end }}
-          </div>
-          {{ end }}
-        {{ else }}
-          <p class="sb-empty">Add entries in <code>content/notes/</code> via the admin panel.</p>
-        {{ end }}
-        <a href="/notes/" class="sb-see-all">All notes →</a>
+    {{- $engineering := where site.RegularPages "Section" "engineering" }}
+    {{- $engineering = $engineering.ByDate.Reverse }}
+    {{- with $engineering }}
+    <section style="margin-bottom:36px">
+      <div class="section-head">
+        <h2 class="section-title">Engineering</h2>
+        <a class="section-more" href="/engineering/">Browse all →</a>
       </div>
-
-      {{/* QUICK NAVIGATE */}}
-      <div class="sb-block">
-        <div class="sb-head">Explore</div>
-        <div class="sb-grid">
-          <a href="/arabic/" class="sb-btn">🌙 Arabic</a>
-          <a href="/videos/" class="sb-btn">▶ Videos</a>
-          <a href="/projects/" class="sb-btn">⚡ Projects</a>
-          <a href="/cv/" class="sb-btn">📄 CV</a>
+      {{- with index . 0 }}
+      <a href="{{ .RelPermalink }}" class="post-featured">
+        <div class="pf-label">Latest field note</div>
+        <div class="pf-title">{{ .Title }}</div>
+        <p class="pf-excerpt">{{ .Summary | plainify | truncate 150 }}</p>
+      </a>
+      {{- end }}
+      {{- range first 3 (after 1 $engineering) }}
+      <a href="{{ .RelPermalink }}" class="post-row">
+        <div class="pr-date-col">{{ .Date.Format "Jan 2006" }}</div>
+        <div>
+          <span class="pr-title">{{ .Title }}</span>
+          <p class="pr-excerpt">{{ .Summary | plainify | truncate 110 }}</p>
         </div>
-      </div>
+      </a>
+      {{- end }}
+    </section>
+    {{- end }}
 
-      {{/* RECENT TAGS */}}
-      <div class="sb-block">
-        <div class="sb-head">Topics</div>
-        <div class="sb-tags">
-          {{ $pages := .Site.RegularPages }}
-          {{ $tags := slice }}
-          {{ range $pages }}
-            {{ range .Params.tags }}
-              {{ $tags = $tags | append . }}
-            {{ end }}
-          {{ end }}
-          {{ range (uniq $tags | first 14) }}
-          <a href="/tags/{{ . | urlize }}/" class="sb-tag-pill">{{ . }}</a>
-          {{ end }}
+    {{- $notes := where site.RegularPages "Section" "notes" }}
+    {{- $notes = $notes.ByDate.Reverse }}
+    {{- with $notes }}
+    <section style="margin-bottom:36px">
+      <div class="section-head">
+        <h2 class="section-title">Recent Notes</h2>
+        <a class="section-more" href="/notes/">View all →</a>
+      </div>
+      {{- range first 4 . }}
+      <a href="{{ .RelPermalink }}" class="post-row">
+        <div class="pr-date-col">{{ .Date.Format "Jan 2006" }}</div>
+        <div>
+          <span class="pr-title">{{ .Title }}</span>
+          <p class="pr-excerpt">{{ .Summary | plainify | truncate 110 }}</p>
         </div>
-      </div>
+      </a>
+      {{- end }}
+    </section>
+    {{- end }}
 
-      {{/* RSS + SEARCH */}}
-      <div class="sb-block">
-        <div class="sb-head">Follow</div>
-        <div class="sb-follow-links">
-          <a href="/index.xml" class="sb-follow-btn">📡 RSS Feed</a>
-          <a href="/search/" class="sb-follow-btn">🔍 Search</a>
+    {{- $bangla := where site.RegularPages "Section" "bangla" }}
+    {{- $bangla = $bangla.ByDate.Reverse }}
+    {{- with $bangla }}
+    <section>
+      <div class="section-head">
+        <h2 class="section-title">রাফখাতা</h2>
+        <a class="section-more" href="/bangla/">সব লেখা →</a>
+      </div>
+      {{- range first 4 . }}
+      <a href="{{ .RelPermalink }}" class="post-row">
+        <div class="pr-date-col">{{ .Date.Format "Jan 2006" }}</div>
+        <div>
+          <span class="pr-title">{{ .Title }}</span>
+          <p class="pr-excerpt">{{ .Summary | plainify | truncate 110 }}</p>
         </div>
-      </div>
+      </a>
+      {{- end }}
+    </section>
+    {{- end }}
 
-    </aside>
   </div>
 
+  {{/* ══════════════════════════════════════
+       SIDEBAR
+  ══════════════════════════════════════ */}}
+  <aside class="home-sidebar">
+
+    <div class="sb-block">
+      <div class="sb-head">Explore</div>
+      <div class="sb-grid">
+        <a class="sb-btn" href="/start-here/">Start Here</a>
+        <a class="sb-btn" href="/topics/">Topics</a>
+        <a class="sb-btn" href="/about/">About</a>
+        <a class="sb-btn" href="/cv/">CV</a>
+      </div>
+    </div>
+
+    <div class="sb-block">
+      <div class="sb-head">Knowledge Areas</div>
+      <div class="sb-tags">
+        {{- range (slice "Instrumentation" "Control Systems" "Power Plants" "OT Security" "Reliability" "Study Notes" "Arabic & Ilm" "Reflection") }}
+        <a class="sb-tag-pill" href="/topics/">{{ . }}</a>
+        {{- end }}
+      </div>
+    </div>
+
+    {{- with site.GetPage "projects" }}
+    {{- $projects := .Pages }}
+    {{- with $projects }}
+    <div class="sb-block">
+      <div class="sb-head">Projects</div>
+      {{- range first 3 . }}
+      <div class="note-entry">
+        <div class="note-text">
+          {{- if .Params.projectUrl }}<a href="{{ .Params.projectUrl }}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">{{ .Title }}</a>{{- else }}{{ .Title }}{{- end }}
+        </div>
+        <div class="note-body">{{ .Summary | plainify | truncate 80 }}</div>
+      </div>
+      {{- end }}
+      <a class="sb-see-all" href="/projects/">See all projects →</a>
+    </div>
+    {{- end }}
+    {{- end }}
+
+    {{- if or site.Params.social.linkedin site.Params.social.facebook site.Params.social.github }}
+    <div class="sb-block">
+      <div class="sb-head">Connect</div>
+      <div class="sb-follow-links">
+        {{- with site.Params.social.linkedin }}<a class="sb-follow-btn" href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{- end }}
+        {{- with site.Params.social.facebook }}<a class="sb-follow-btn" href="{{ . }}" target="_blank" rel="noopener">Facebook</a>{{- end }}
+        {{- with site.Params.social.github }}<a class="sb-follow-btn" href="{{ . }}" target="_blank" rel="noopener">GitHub</a>{{- end }}
+      </div>
+    </div>
+    {{- end }}
+
+  </aside>
+
 </div>
-{{ end }}
+{{- end }}

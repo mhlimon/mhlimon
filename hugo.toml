@@ -38,8 +38,8 @@ defaultContentLanguage = "en"
   url = "/cv/"
   weight = 7
 
-# Social Links
-[social]
+# Social Links (used in the homepage hero + sidebar)
+[params.social]
   linkedin = "https://linkedin.com/in/mhlimon"
   facebook = "https://fb.com/mehedihossen.limon"
   github = "https://github.com/mhlimon"
@@ -60,11 +60,11 @@ defaultContentLanguage = "en"
 
   mainSections = ["notes", "bangla", "engineering"]
 
-  [params.homeInfoParams]
-    Title = "Mehedi Hossen Limon"
-    Content = "Engineering • Learning • Writing<br>Notes from a life spent learning."
+  # [params.homeInfoParams]
+  #   Title = "Mehedi Hossen Limon"
+  #   Content = "Engineering • Learning • Writing<br>Notes from a life spent learning."
 
-  [params.style]
+[params.style]
     accentColor = "#2c5f2d"
 
 # English Language Definition

@@ -1,20 +1,60 @@
-{{ define "main" }}
-<div style="max-width: 1100px; margin: 0 auto; padding: 40px 15px;">
+{{- define "main" }}
+<div>
+  <div class="section-head" style="margin-bottom:6px">
+    <h1 class="section-title" style="font-size:22px!important;letter-spacing:normal!important;text-transform:none!important">Notes</h1>
+  </div>
+  <p style="font-size:13.5px;color:var(--ink-muted);font-family:var(--font-serif);font-style:italic;margin:0 0 28px">
+    {{ with .Description }}{{ . }}{{ else }}Field observations, study notes, lessons learned, and engineering references.{{ end }}
+  </p>
 
-    <div style="text-align: center; margin-bottom: 60px;">
-        <h1 style="font-size: 2.8rem;">Notes</h1>
-        <p style="font-size: 1.25rem; color: #555;">Field observations, study notes, lessons learned, and engineering references</p>
-    </div>
+  {{/* Notes live in nested subsections (field-notes/, study-notes/, etc.),
+       so `.Pages` (direct children only) won't find them — filter
+       site.RegularPages by top-level Section instead, and exclude the
+       draft-style entries under /notes/templates/. */}}
+  {{- $allNotes := where site.RegularPages "Section" "notes" }}
+  {{- $allNotes = where $allNotes "CurrentSection.Path" "!=" "/notes/templates" }}
+  {{- $allNotes = where $allNotes "Title" "!=" "" }}
+  {{- $allNotes = $allNotes.ByDate.Reverse }}
 
-    <div class="notes-grid">
-        {{ range .Paginator.Pages }}
-        <div class="note-card">
-            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-            <div class="meta">{{ .Date.Format "02 January 2006" }}</div>
-            <p class="summary">{{ .Summary | plainify | truncate 200 }}...</p>
-            <a href="{{ .RelPermalink }}" class="read-link">View Note →</a>
-        </div>
-        {{ end }}
+  {{- $categories := slice "Field Notes" "Study Notes" "Lessons Learned" "References" }}
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-bottom:32px">
+    {{- range $categories }}
+    {{- $count := len (where $allNotes "Params.categories" "intersect" (slice .)) }}
+    <div style="background:var(--paper-warm);border:1px solid var(--border);border-radius:var(--radius);padding:12px;text-align:center">
+      <div style="font-size:20px;font-weight:600;font-family:var(--font-serif);color:var(--ink)">{{ $count }}</div>
+      <div style="font-size:10px;font-family:var(--font-mono);color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.06em;margin-top:2px">{{ . }}</div>
     </div>
+    {{- end }}
+  </div>
+
+  {{- $paginator := .Paginate $allNotes }}
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px">
+  {{- range $paginator.Pages }}
+  {{- $cat := index (.Params.categories | default (slice "Notes")) 0 }}
+  <a href="{{ .RelPermalink }}" class="post-featured">
+    <div class="pf-label">{{ $cat }}</div>
+    <div class="pf-title">{{ .Title }}</div>
+    <p class="pf-excerpt">{{ .Summary | plainify | truncate 140 }}</p>
+    <div class="post-date" style="margin-top:10px;display:block">{{ .Date.Format "2 Jan 2006" }}</div>
+  </a>
+  {{- end }}
+  </div>
+
+  {{- if not $paginator.Pages }}
+  <p style="color:var(--ink-muted);font-style:italic;font-family:var(--font-serif)">No notes published yet.</p>
+  {{- end }}
+
+  {{- if gt $paginator.TotalPages 1 }}
+  <footer class="page-footer">
+    <nav class="pagination">
+      {{- if $paginator.HasPrev }}
+      <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">« Prev</a>
+      {{- end }}
+      {{- if $paginator.HasNext }}
+      <a class="next" href="{{ $paginator.Next.URL | absURL }}">Next »</a>
+      {{- end }}
+    </nav>
+  </footer>
+  {{- end }}
 </div>
-{{ end }}
+{{- end }}
