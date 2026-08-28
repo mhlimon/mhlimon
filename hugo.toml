@@ -60,6 +60,10 @@ defaultContentLanguage = "en"
 
   mainSections = ["notes", "bangla", "engineering"]
 
+  # [params.homeInfoParams]
+  #   Title = "Mehedi Hossen Limon"
+  #   Content = "Engineering • Learning • Writing<br>Notes from a life spent learning."
+
 [params.style]
     accentColor = "#2c5f2d"
 
