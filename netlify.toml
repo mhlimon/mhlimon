@@ -1,7 +1,9 @@
 [build]
-  command = "git submodule update --init --recursive && rm -rf public && hugo --gc --minify --cleanDestinationDir"
+  command = "hugo --gc --minify --cleanDestinationDir"
   publish = "public"
 
 [build.environment]
   HUGO_VERSION = "0.146.0"
-  # GIT_SUBMODULE_STRATEGY = "recursive"   # you can also try this instead of the command above
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
+  GIT_SUBMODULE_STRATEGY = "recursive"
