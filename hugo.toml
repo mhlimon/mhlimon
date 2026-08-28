@@ -27,7 +27,7 @@ defaultContentLanguage = "en"
   weight = 4
 [[menu.main]]
   name = "রাফখাতা"
-  url = "/bangla/"
+  url = "https://mhlimon-blog.netlify.app/"
   weight = 5
 [[menu.main]]
   name = "About"
