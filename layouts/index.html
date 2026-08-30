@@ -35,7 +35,7 @@
      INTRO
 ══════════════════════════════════════ */}}
 {{- if .Content }}
-<div class="home-intro post-content" style="max-width:var(--main-width, 1024px); margin: 0 auto 36px; padding: 0 16px;">
+<div class="post-content" style="max-width:var(--read-w);margin-bottom:36px">
   {{ .Content }}
 </div>
 {{- end }}
@@ -75,6 +75,7 @@
     {{- end }}
 
     {{- $notes := where site.RegularPages "Section" "notes" }}
+    {{- $notes = where $notes "Title" "!=" "" }}
     {{- $notes = $notes.ByDate.Reverse }}
     {{- with $notes }}
     <section style="margin-bottom:36px">

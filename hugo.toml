@@ -27,7 +27,7 @@ defaultContentLanguage = "en"
   weight = 4
 [[menu.main]]
   name = "রাফখাতা"
-  url = "https://mhlimon-blog.netlify.app/"
+  url = "/bangla/"
   weight = 5
 [[menu.main]]
   name = "About"
@@ -60,12 +60,22 @@ defaultContentLanguage = "en"
 
   mainSections = ["notes", "bangla", "engineering"]
 
+  # Default social share image (Open Graph / Twitter card) shown when links
+  # to the site are shared on Slack, WhatsApp, X, etc.
+  images = ["images/og-image.png"]
+
   # [params.homeInfoParams]
   #   Title = "Mehedi Hossen Limon"
   #   Content = "Engineering • Learning • Writing<br>Notes from a life spent learning."
 
-[params.style]
-    accentColor = "#2c5f2d"
+[params.assets]
+  favicon = "favicon.ico"
+  favicon16x16 = "favicon-16x16.png"
+  favicon32x32 = "favicon-32x32.png"
+  apple_touch_icon = "apple-touch-icon.png"
+  safari_pinned_tab = "safari-pinned-tab.svg"
+  theme_color = "#b5301f"
+  msapplication_TileColor = "#b5301f"
 
 # English Language Definition
 [languages.en]
