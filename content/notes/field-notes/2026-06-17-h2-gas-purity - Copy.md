@@ -1,11 +1,11 @@
 ---
-title: " Simple Fire System Loop Device Healthiness checked"
-date: 2026-09-16
+title: "Generator Hydrogen Purity Analyzer: Detector Failure, Calibration and Practical Lessons"
+date: 2026-06-27
 draft: false
 
-description: "Field notes on schedule maintenance of fire fighting system loop with manual call point, hooter, flame detector and deluge valve system"
+description: "Field notes on troubleshooting a Yokogawa GD402/GD40 hydrogen purity analyzer, including detector failure, calibration philosophy and practical engineering lessons."
 
-summary: "Half yearly function checking and required maintenace has been done for devices in fire detection loop and flame detection based deluge valve system"
+summary: "Practical lessons from troubleshooting a generator hydrogen purity analyzer using systematic fault isolation and OEM calibration procedures."
 
 categories:
   - Field Notes
@@ -13,17 +13,17 @@ categories:
 tags:
   - instrumentation
   - power-plant
-  - fire-detection
-  - simplex
-  - slame-detector
-  - maintenance
-  - 4100es
-  - deluge
-  
+  - generator
+  - hydrogen
+  - calibration
+  - troubleshooting
+  - yokogawa
+  - gd402
+  - gd40
 
 cover:
   image: ""
-  alt: "Deluge system checking"
+  alt: "Generator Hydrogen Purity Analyzer"
   caption: ""
   relative: false
 
