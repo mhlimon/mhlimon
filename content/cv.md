@@ -30,7 +30,7 @@ draft: false
 <div class="cv-page">
 
 <div class="cv-header-block">
-    <div class="cv-avatar-lg">মহ</div>
+    <img src="/images/cv-photo.jpg" alt="Mehedi Hossen Limon" class="cv-avatar-lg" style="object-fit:cover; padding:0; background:none;">
     <div class="cv-name-block">
         <h2>Mehedi Hossen Limon</h2>
         <p>Instrumentation & Control Engineer • Electrical Maintenance Engineer • OT/ICS Cybersecurity Enthusiast • Bangla Writer</p>
