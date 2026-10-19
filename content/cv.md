@@ -8,23 +8,143 @@ draft: false
 {{< rawhtml >}}
 <style>
 .cv-page { max-width: 820px; margin: 0 auto; }
-.cv-header-block { display: flex; align-items: flex-start; gap: 24px; padding: 28px; background: var(--paper-warm); border: 1px solid var(--border-mid); border-radius: var(--radius-lg); margin-bottom: 32px; flex-wrap: wrap; }
-.cv-avatar-lg { width: 80px; height: 80px; border-radius: 50%; background: var(--ink); color: var(--paper); font-size: 28px; font-weight: 700; display: flex; align-items: center; justify-content: center; font-family: var(--font-bn); flex-shrink: 0; }
-.cv-name-block h2 { font-family: var(--font-serif) !important; font-size: 26px !important; font-weight: 700 !important; color: var(--ink) !important; margin: 0 0 6px !important; }
-.cv-name-block p { font-size: 14px; color: var(--ink-muted); font-family: var(--font-serif); font-style: italic; margin: 0; }
-.cv-contacts { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
-.cv-contacts a { font-size: 12.5px; color: var(--ink-soft); text-decoration: none; border: 1px solid var(--border-mid); padding: 4px 12px; border-radius: 4px; font-family: var(--font-mono); }
-.cv-contacts a:hover { background: var(--ink); color: var(--paper); }
-.cv-print-btn { margin-left: auto; background: var(--ink); color: var(--paper); border: none; padding: 10px 20px; border-radius: var(--radius); cursor: pointer; font-size: 13px; }
-.cv-section-h { font-family: var(--font-serif) !important; font-size: 11px !important; font-weight: 700 !important; letter-spacing: 0.2em !important; text-transform: uppercase !important; color: var(--ink) !important; border-bottom: 2px solid var(--ink) !important; padding-bottom: 8px !important; margin: 32px 0 18px !important; }
-.cv-exp { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border-mid); }
+
+.cv-header-block {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px;
+  background: var(--paper-warm);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-lg);
+  margin-bottom: 32px;
+  flex-wrap: nowrap;
+}
+
+.cv-avatar-lg {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+  background: none;
+  padding: 0;
+}
+
+.cv-name-block {
+  flex: 1;
+  min-width: 0;
+}
+
+.cv-name-block h2 {
+  font-family: var(--font-serif) !important;
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  color: var(--ink) !important;
+  margin: 0 0 6px !important;
+}
+
+.cv-name-block p {
+  font-size: 14px;
+  color: var(--ink-muted);
+  font-family: var(--font-serif);
+  font-style: italic;
+  margin: 0;
+}
+
+.cv-contacts {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.cv-contacts a {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border: 1px solid var(--border-mid);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+}
+
+.cv-contacts a:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.cv-print-btn {
+  margin-left: auto;
+  flex-shrink: 0;
+  align-self: flex-start;
+  background: var(--ink);
+  color: var(--paper);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.cv-section-h {
+  font-family: var(--font-serif) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  color: var(--ink) !important;
+  border-bottom: 2px solid var(--ink) !important;
+  padding-bottom: 8px !important;
+  margin: 32px 0 18px !important;
+}
+
+.cv-exp {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-mid);
+}
+
 .cv-exp:last-child { border-bottom: none; }
-.cv-exp-hd { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+
+.cv-exp-hd {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .cv-exp-title { font-size: 15.5px; font-weight: 600; color: var(--ink); }
 .cv-exp-period { font-size: 12px; font-family: var(--font-mono); color: var(--ink-faint); white-space: nowrap; }
 .cv-exp-co { font-size: 13.5px; color: var(--accent); font-style: italic; margin-bottom: 10px; }
-.cv-exp-pts li { font-size: 14px; color: var(--ink-soft); padding: 4px 0 4px 18px; position: relative; line-height: 1.65; }
-.cv-exp-pts li::before { content: "—"; position: absolute; left: 0; color: var(--ink-faint); }
+
+.cv-exp-pts li {
+  font-size: 14px;
+  color: var(--ink-soft);
+  padding: 4px 0 4px 18px;
+  position: relative;
+  line-height: 1.65;
+}
+
+.cv-exp-pts li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--ink-faint);
+}
+
+/* Mobile: allow stack */
+@media (max-width: 640px) {
+  .cv-header-block {
+    flex-wrap: wrap;
+  }
+  .cv-print-btn {
+    margin-left: 0;
+    width: 100%;
+  }
+}
 </style>
 
 <div class="cv-page">
