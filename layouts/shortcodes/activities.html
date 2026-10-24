@@ -1,0 +1,18 @@
+{{- with site.Data.activities }}
+<div class="activity-list">
+  {{- range . }}
+  <div class="activity-row">
+    <div class="activity-date">{{ .date }}</div>
+    <div class="activity-text">
+      {{- if .url -}}
+        <a href="{{ .url }}">{{ .text }}</a>
+      {{- else -}}
+        {{ .text }}
+      {{- end -}}
+    </div>
+  </div>
+  {{- end }}
+</div>
+{{- else }}
+<p>No activities recorded yet.</p>
+{{- end }}
