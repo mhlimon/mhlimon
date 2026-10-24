@@ -26,24 +26,19 @@ defaultContentLanguage = "en"
   weight = 3
 
 [[menu.main]]
-  name = "Lessons"
-  url = "content/notes/lessons-learned/register.md"
-  weight = 4
-
-[[menu.main]]
   name = "Topics"
   url = "/topics/"
-  weight = 5
+  weight = 4
 
 [[menu.main]]
   name = "রাফখাতা"
   url = "/bangla/"
-  weight = 6
+  weight = 5
 
 [[menu.main]]
   name = "About"
   url = "/about/"
-  weight = 7
+  weight = 6
 
 # Social Links (used in the homepage hero + sidebar)
 [params.social]
