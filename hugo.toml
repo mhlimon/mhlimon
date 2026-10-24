@@ -17,6 +17,7 @@ defaultContentLanguage = "en"
 [[menu.main]]
   name = "Field Notes"
   url = "/notes/"
+  identifier = "notes"
   weight = 2
 
 [[menu.main]]
@@ -103,3 +104,6 @@ defaultContentLanguage = "en"
 [taxonomies]
   tag = "tags"
   category = "categories"
+
+[markup.goldmark.renderer]
+  unsafe = true
