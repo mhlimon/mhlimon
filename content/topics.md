@@ -3,6 +3,9 @@ title: "Topics"
 description: "জ্ঞানের বিভিন্ন বিষয় অনুসারে সংগঠিত নোটস ও লেখা"
 layout: single
 ShowToc: false
+draft: false
+ShowReadingTime: false
+hidemeta: true
 ---
 
 # Topics

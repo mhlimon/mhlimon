@@ -1,10 +1,4 @@
 ---
-title: "Notes"
-description: "Field observations, study notes, lessons learned, and engineering references"
-layout: list
-ShowToc: false
+title: "Field Notes"
+description: "Troubleshooting cases, inspections, maintenance lessons, and improvement proposals"
 ---
-
-# Notes
-
-Field observations, study notes, lessons learned, and engineering references with full notes.

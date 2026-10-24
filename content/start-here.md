@@ -3,6 +3,9 @@ title: "Start Here"
 description: "MH Limon সাইটে স্বাগতম — আপনার জন্য সবচেয়ে উপযোগী জায়গাগুলো"
 layout: single
 ShowToc: false
+draft: false
+ShowReadingTime: false
+hidemeta: true
 ---
 
 # স্বাগতম

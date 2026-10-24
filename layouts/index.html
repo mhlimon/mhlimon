@@ -47,6 +47,29 @@
   ══════════════════════════════════════ */}}
   <div class="home-main">
 
+
+    {{- $notes := where site.RegularPages "Section" "notes" }}
+    {{- $notes = where $notes "Title" "!=" "" }}
+    {{- $notes = $notes.ByDate.Reverse }}
+    {{- with $notes }}
+    <section style="margin-bottom:36px">
+      <div class="section-head">
+        <h2 class="section-title">Recent Field Notes</h2>
+        <a class="section-more" href="/notes/">View all →</a>
+        <a class="section-more" href="/notes/lessons-learned/">Lessons →</a>
+      </div>
+      {{- range first 4 . }}
+      <a href="{{ .RelPermalink }}" class="post-row">
+        <div class="pr-date-col">{{ .Date.Format "Jan 2006" }}</div>
+        <div>
+          <span class="pr-title">{{ .Title }}</span>
+          <p class="pr-excerpt">{{ .Summary | plainify | truncate 110 }}</p>
+        </div>
+      </a>
+      {{- end }}
+    </section>
+    {{- end }}
+
     {{- $engineering := where site.RegularPages "Section" "engineering" }}
     {{- $engineering = $engineering.ByDate.Reverse }}
     {{- with $engineering }}
@@ -74,26 +97,6 @@
     </section>
     {{- end }}
 
-    {{- $notes := where site.RegularPages "Section" "notes" }}
-    {{- $notes = where $notes "Title" "!=" "" }}
-    {{- $notes = $notes.ByDate.Reverse }}
-    {{- with $notes }}
-    <section style="margin-bottom:36px">
-      <div class="section-head">
-        <h2 class="section-title">Recent Notes</h2>
-        <a class="section-more" href="/notes/">View all →</a>
-      </div>
-      {{- range first 4 . }}
-      <a href="{{ .RelPermalink }}" class="post-row">
-        <div class="pr-date-col">{{ .Date.Format "Jan 2006" }}</div>
-        <div>
-          <span class="pr-title">{{ .Title }}</span>
-          <p class="pr-excerpt">{{ .Summary | plainify | truncate 110 }}</p>
-        </div>
-      </a>
-      {{- end }}
-    </section>
-    {{- end }}
 
     {{- $bangla := where site.RegularPages "Section" "bangla" }}
     {{- $bangla = $bangla.ByDate.Reverse }}
@@ -125,19 +128,32 @@
     <div class="sb-block">
       <div class="sb-head">Explore</div>
       <div class="sb-grid">
-        <a class="sb-btn" href="/start-here/">Start Here</a>
+        <a class="sb-btn" href="/engineering/">Engineering</a>
+        <a class="sb-btn" href="/notes/">Field Notes</a>
+        <a class="sb-btn" href="/notes/lessons-learned/">Lessons</a>
         <a class="sb-btn" href="/topics/">Topics</a>
-        <a class="sb-btn" href="/about/">About</a>
-        <a class="sb-btn" href="/cv/">CV</a>
+        <a class="sb-btn" href="/bangla/">রাফখাতা</a>
+      </div>
+
+</div>
+
+    <div class="sb-block">
+      <div class="sb-head">Popular Topics</div>
+      <div class="sb-tags">
+        <a class="sb-tag-pill" href="/tags/instrumentation/">Instrumentation</a>
+        <a class="sb-tag-pill" href="/tags/dcs/">DCS - Control</a>
+        <a class="sb-tag-pill" href="/tags/power-plants/">Power Plants</a>
+        <a class="sb-tag-pill" href="/tags/reliability/">Reliability</a>
+        <a class="sb-tag-pill" href="/tags/ot-security/">OT Security</a>
       </div>
     </div>
 
     <div class="sb-block">
-      <div class="sb-head">Knowledge Areas</div>
-      <div class="sb-tags">
-        {{- range (slice "Instrumentation" "Control Systems" "Power Plants" "OT Security" "Reliability" "Study Notes" "Arabic & Ilm" "Reflection") }}
-        <a class="sb-tag-pill" href="/topics/">{{ . }}</a>
-        {{- end }}
+      <div class="sb-head">About</div>
+      <div class="sb-follow-links">
+        <a class="sb-follow-btn" href="/about/">About me</a>
+        <a class="sb-follow-btn" href="/cv/">CV</a>
+        <!-- social icons if desired -->
       </div>
     </div>
 
