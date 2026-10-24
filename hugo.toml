@@ -27,7 +27,7 @@ defaultContentLanguage = "en"
 
 [[menu.main]]
   name = "Lessons"
-  url = "/notes/lessons-learned/"
+  url = "content/notes/lessons-learned/register.md"
   weight = 4
 
 [[menu.main]]
@@ -83,7 +83,7 @@ defaultContentLanguage = "en"
   safari_pinned_tab = "safari-pinned-tab.svg"
   theme_color = "#b5301f"
   msapplication_TileColor = "#b5301f"
-
+  
 # English Language Definition
 [languages.en]
   languageCode = "en"
@@ -91,12 +91,6 @@ defaultContentLanguage = "en"
   [languages.en.params]
     description = "Power Plant Engineer • Talibul Ilm • Writer"
 
-# Bengali Language Definition
-[languages.bn]
-  languageCode = "bn-bd"
-  title = "MH Limon"
-  [languages.bn.params]
-    description = "পাওয়ার প্ল্যান্ট ইঞ্জিনিয়ার • তালিবুল ইলম • লেখক"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

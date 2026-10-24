@@ -12,6 +12,7 @@
        site.RegularPages by top-level Section instead, and exclude the
        draft-style entries under /notes/templates/. */}}
   {{- $allNotes := where site.RegularPages "Section" "notes" }}
+  {{- $allNotes = where $allNotes "Params.categories" "intersect" (slice "Field Notes") }}
   {{- $allNotes = where $allNotes "CurrentSection.Path" "!=" "/notes/templates" }}
   {{- $allNotes = where $allNotes "Title" "!=" "" }}
   {{- $allNotes = $allNotes.ByDate.Reverse }}

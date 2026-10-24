@@ -838,3 +838,24 @@ body::after {
 }
 
 /* Optional: nicer status badges via plain text still works without this */
+
+/* Match intro width to hero / home grid */
+.home-intro {
+  max-width: var(--main-width, 1024px);
+  margin: 0 auto 36px;
+  padding: 0 16px;
+}
+
+.home-intro p {
+  max-width: none;
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+/* If hero uses a fixed inner width, match it */
+.hero-inner,
+.home-intro {
+  max-width: var(--main-width, 1024px);
+  margin-left: auto;
+  margin-right: auto;
+}
