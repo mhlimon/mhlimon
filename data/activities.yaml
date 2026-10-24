@@ -1,0 +1,32 @@
+- date: "2026-10"
+  text: "Troubleshot an instrument-air compressor and dryer sequence"
+  url: "https://mhlimon.com/notes/2026-10-08-instrument-air-dryer/"
+  tag: field
+- date: "2026-10"
+  text: "Diagnosed a repeatedly tripping motor-operated valve"
+  url: "https://mhlimon.com/notes/2026-10-04-mov-troubleshooting/"
+  tag: field
+- date: "2026-10"
+  text: "Reviewed solenoid valve health beyond coil resistance checks"
+  url: "https://mhlimon.com/notes/2026-10-07-solenoid-valve/"
+  tag: field
+- date: "2026-10"
+  text: "Proposed timed shutdown to reduce unnecessary pump running hours"
+  url: "https://mhlimon.com/notes/2026-10-08-timed-pump-shutdown/"
+  tag: field
+- date: "2026-09"
+  text: "Completed fire detection and deluge system functional checks"
+  url: "https://mhlimon.com/notes/2026-09-22-fire-fighting-check/"
+  tag: field
+- date: "2026-06"
+  text: "Troubleshot hydrogen purity analyzer detector failure and calibration"
+  url: "https://mhlimon.com/notes/2026-06-17-h2-gas-purity/"
+  tag: study
+- date: "2026-05"
+  text: "Reviewed gland steam control valves and root cause of pressure fluctuation"
+  url: "https://mhlimon.com/notes/2026-05-20-gland-steam-control/"
+  tag: field
+- date: "2026-05"
+  text: "Resolved a bad-value analog input issue in an Ovation DCS loop"
+  url: "https://mhlimon.com/notes/2026-05-24-dcs-analog-input/"
+  tag: field

@@ -157,6 +157,25 @@
       </div>
     </div>
 
+    {{- with site.Data.activities }}
+    <div class="sb-block">
+      <div class="sb-head">Recent activity</div>
+      {{- range first 4 . }}
+      <div class="note-entry">
+        <div class="note-date">{{ .date }}</div>
+        <div class="note-text">
+          {{- if .url -}}
+            <a href="{{ .url }}" style="color:inherit;text-decoration:none">{{ .text }}</a>
+          {{- else -}}
+            {{ .text }}
+          {{- end -}}
+        </div>
+      </div>
+      {{- end }}
+      <a class="sb-see-all" href="/activity/">View all →</a>
+    </div>
+    {{- end }}
+
     {{- with site.GetPage "projects" }}
     {{- $projects := .Pages }}
     {{- with $projects }}
