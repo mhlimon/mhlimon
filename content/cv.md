@@ -1,6 +1,6 @@
 ---
 title: "CV — Mehedi Hossen Limon"
-description: "Instrumentation & Control Engineer, Electrical Maintenance Engineer · OT/ICS Cybersecurity Enthusiast · Bangla Writer · Bangladesh"
+description: "Instrumentation & Control Engineer, Electrical Maintenance Engineer · Bangla Writer · Bangladesh"
 date: 2026-01-01
 draft: false
 ---

@@ -98,12 +98,11 @@ hidemeta: true
 
 <div class="about-wrap">
     <div class="about-hero">
-        <div class="about-avatar">মহ</div>
+        <img src="/images/profile.jpg" alt="Mehedi Hossen Limon" class="hero-avatar" style="object-fit:cover">
         <div>
             <div class="about-intro-name">Mehedi Hossen Limon</div>
             <div class="about-intro-title">
-                প্রকৌশলী<br>
-                তালিবুল ইলম 
+                প্রকৌশলী এবং তালিবুল ইলম 
             </div>
             <div class="about-badges">
                 <span class="badge" style="background:var(--amber-bg);color:var(--amber)">⚡ প্রকৌশলী</span>
