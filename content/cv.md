@@ -153,7 +153,7 @@ draft: false
     <img src="/images/cv-photo.jpg" alt="Mehedi Hossen Limon" class="cv-avatar-lg" style="object-fit:cover; padding:0; background:none;">
     <div class="cv-name-block">
         <h2>Mehedi Hossen Limon</h2>
-        <p>Instrumentation & Control Engineer • Electrical Maintenance Engineer • OT/ICS Cybersecurity Enthusiast • Bangla Writer</p>
+        <p>Instrumentation & Control Engineer • Electrical Maintenance Engineer </p>
         <div class="cv-contacts">
             <a href="https://mhlimon.com" target="_blank">🌐 mhlimon.com</a>
             <a href="https://linkedin.com/in/mhlimon" target="_blank">🔗 LinkedIn</a>
@@ -173,7 +173,6 @@ I am a hands-on Instrumentation & Control Engineer with experience in power plan
     <li>Instrumentation & Control Systems</li>
     <li>Power Plant Electrical Maintenance</li>
     <li>Industrial Automation & DCS</li>
-    <li>OT Cybersecurity</li>
     <li>Control Valve & Actuator Maintenance</li>
     <li>Relay Coordination & Protection Systems</li>
     <li>Systems Thinking & Troubleshooting</li>
@@ -191,7 +190,6 @@ I am a hands-on Instrumentation & Control Engineer with experience in power plan
     <ul class="cv-exp-pts">
         <li>Preventive, predictive & condition-based maintenance of instruments and control systems</li>
         <li>Troubleshooting of DCS, PLC and field instruments</li>
-        <li>OT/ICS Cybersecurity assessment and awareness</li>
         <li>Energy audit and IMS (ISO) internal auditing</li>
     </ul>
 </div>

@@ -103,12 +103,11 @@ hidemeta: true
             <div class="about-intro-name">Mehedi Hossen Limon</div>
             <div class="about-intro-title">
                 প্রকৌশলী<br>
-                তালিবুল ইলম · লেখক
+                তালিবুল ইলম 
             </div>
             <div class="about-badges">
                 <span class="badge" style="background:var(--amber-bg);color:var(--amber)">⚡ প্রকৌশলী</span>
                 <span class="badge" style="background:var(--teal-bg);color:var(--teal)">🕌 তালিবুল ইলম</span>
-                <span class="badge" style="background:var(--accent-bg);color:var(--accent)">✍️ লেখক</span>
             </div>
         </div>
     </div>

@@ -22,10 +22,6 @@ hidemeta: true
 - Generator Systems
 - Electrical Maintenance
 
-### OT Security
-- Fundamentals
-- IEC 62443
-- Field Implementation
 
 ### Learning & Ilm
 - Arabic Notes
