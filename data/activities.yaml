@@ -30,3 +30,13 @@
   text: "Resolved a bad-value analog input issue in an Ovation DCS loop"
   url: "https://mhlimon.com/notes/2026-05-24-dcs-analog-input/"
   tag: field
+- date: "2026-04"
+  text: "Completed ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 internal audit of CCPP"
+  tag: field
+- date: "2025-09"
+  text: "Analysed borewell pump priority using efficiency, hours, and wear weighting"
+  url: "/notes/2025-09-21-borewell-pump-priority-optimization/"
+- date: "2025-06"
+  text: "Characterized borewell pumps with portable ultrasonic flow; implemented DCS groundwater estimate from pressure"
+  url: "/notes/2025-06-15-groundwater-flow-from-pump-pressure/"
+
