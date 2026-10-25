@@ -1,0 +1,27 @@
+---
+title: "Low-Cost Automatic Room Mopper"
+date: 2018-06-01
+draft: false
+categories:
+  - Projects
+tags:
+  - arduino
+  - embedded-systems
+  - control-systems
+description: "Control Systems lab project: algorithm and implementation of a low-cost automatic floor-mopping demonstrator."
+summary: "Arduino-based automatic mopper concept using stepper motor, IR sensing, and a vacuum-related mechanism for a control-systems lab."
+---
+
+## Overview
+
+Control Systems lab project: develop an **algorithm** and implement a **low-cost automatic floor mopper** demonstrator.
+
+Components noted in the project record include **Arduino Uno**, stepper motor, IR sensor, and a vacuum-cleaner-related mechanism.
+
+## Skills
+
+Embedded control · sequencing · sensor-based navigation basics · prototyping  
+
+## Note
+
+Lab prototype for learning control and integration—not a consumer product.

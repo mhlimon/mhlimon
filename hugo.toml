@@ -26,19 +26,26 @@ defaultContentLanguage = "en"
   weight = 3
 
 [[menu.main]]
-  name = "Topics"
-  url = "/topics/"
+  name = "Projects"
+  url = "/projects/"
   weight = 4
+
+[[menu.main]]
+  name = "Publications"
+  url = "/publications/"
+  identifier = "publications"
+  weight = 5
+
 
 [[menu.main]]
   name = "রাফখাতা"
   url = "/bangla/"
-  weight = 5
+  weight = 6
 
 [[menu.main]]
   name = "About"
   url = "/about/"
-  weight = 6
+  weight = 7
 
 # Social Links (used in the homepage hero + sidebar)
 [params.social]
