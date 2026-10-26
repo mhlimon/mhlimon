@@ -1,0 +1,42 @@
+{{- define "main" }}
+<div>
+  <div class="section-head" style="margin-bottom:6px">
+    <h1 class="section-title" style="font-size:22px!important;letter-spacing:normal!important;text-transform:none!important">
+      {{ .Title | default "রাফখাতা" }}
+    </h1>
+  </div>
+  <p style="font-size:13.5px;color:var(--ink-muted);font-family:var(--font-serif);font-style:italic;margin:0 0 28px">
+    {{ with .Description }}{{ . }}{{ else }}বাংলা লেখা—ভাবনা, সমাজ ও জীবন।{{ end }}
+  </p>
+
+  {{- $pages := where site.RegularPages "Section" "bangla" }}
+  {{- $pages = where $pages "Title" "!=" "" }}
+  {{- $pages = $pages.ByDate.Reverse }}
+  {{- $paginator := .Paginate $pages }}
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px">
+  {{- range $paginator.Pages }}
+  {{- $cat := index (.Params.categories | default (slice "রাফখাতা")) 0 }}
+  <a href="{{ .RelPermalink }}" class="post-featured">
+    <div class="pf-label">{{ $cat }}</div>
+    <div class="pf-title">{{ .Title }}</div>
+    <p class="pf-excerpt">{{ .Summary | plainify | truncate 140 }}</p>
+    <div class="post-date" style="margin-top:10px;display:block">{{ .Date.Format "2 Jan 2006" }}</div>
+  </a>
+  {{- end }}
+  </div>
+
+  {{- if gt $paginator.TotalPages 1 }}
+  <footer class="page-footer" style="margin-top:32px">
+    <nav class="pagination">
+      {{- if $paginator.HasPrev }}
+      <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">« Prev</a>
+      {{- end }}
+      {{- if $paginator.HasNext }}
+      <a class="next" href="{{ $paginator.Next.URL | absURL }}">Next »</a>
+      {{- end }}
+    </nav>
+  </footer>
+  {{- end }}
+</div>
+{{- end }}
