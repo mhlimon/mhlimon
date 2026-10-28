@@ -31,7 +31,7 @@
   url: "https://mhlimon.com/notes/2026-05-24-dcs-analog-input/"
   tag: field
 - date: "2026-04"
-  text: "Completed ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 internal audit of CCPP"
+  text: "Completed ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 internal audit of Combined Cycle Power Plant"
   tag: field
 - date: "2025-09"
   text: "Analysed borewell pump priority using efficiency, hours, and wear weighting"
@@ -39,4 +39,9 @@
 - date: "2025-06"
   text: "Characterized borewell pumps with portable ultrasonic flow; implemented DCS groundwater estimate from pressure"
   url: "/notes/2025-06-15-groundwater-flow-from-pump-pressure/"
-
+- date: "2025-03"
+  text: "Restored Ovation OCR1100 after replacement failure caused by software/patch mismatch; installed required patch, configured controller, completed DRCL, verified In Control."
+  url: "/notes/2025-03-21-ovation-ocr1100-controller-would-not-enter-control.md/"
+- date: "2025-02"
+  text: "Completed ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 internal audit of HFO Power Plant"
+  tag: field
