@@ -4,7 +4,7 @@ date: 2026-10-08
 draft: false
 
 categories:
-  - Engineering Notes
+  - Engineering
 
 tags:
   - instrumentation

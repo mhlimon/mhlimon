@@ -3,7 +3,7 @@ title: "Instrumentation & Control Troubleshooting — Lessons Learned Register"
 date: 2026-10-19
 draft: false
 categories:
-  - Engineering
+  - Field Notes
   - Lessons Learned
 tags:
   - instrumentation

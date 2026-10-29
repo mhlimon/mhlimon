@@ -6,7 +6,7 @@ defaultContentLanguage = "en"
 
 # Pagination
 [pagination]
-  pagerSize = 10
+  pagerSize = 24
 
 # Menu
 [[menu.main]]
